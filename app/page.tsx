@@ -32,7 +32,7 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/iletisim"
-              className="px-8 py-4 bg-[var(--color-neon-blue)] text-black font-bold rounded hover:bg-[#33FFFF] transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(0,255,255,0.3)]"
+              className="px-8 py-4 bg-[var(--color-accent-pop)] text-white font-bold rounded hover:opacity-90 transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(255,107,53,0.3)]"
             >
               Kapsamı Netleştirelim
             </Link>

@@ -46,7 +46,7 @@ export function Navbar() {
                         <li>
                             <Link
                                 href="/iletisim"
-                                className="block py-2 px-3 text-black bg-[var(--color-neon-blue)] rounded md:px-5 md:py-2 hover:bg-[var(--color-neon-blue)]/80 transition-opacity font-semibold mt-2 md:mt-0"
+                                className="block py-2 px-3 text-white bg-[var(--color-accent-pop)] rounded md:px-5 md:py-2 hover:opacity-90 transition-opacity font-semibold mt-2 md:mt-0"
                             >
                                 İletişim
                             </Link>

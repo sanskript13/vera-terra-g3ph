@@ -4,14 +4,13 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 
-  --color-neon-blue: #00FFFF;
-  --color-neon-orange: #FF5500;
-  --color-soil-primary: #8B4513;
-  /* SaddleBrown */
-  --color-soil-secondary: #D2691E;
-  /* Chocolate */
-  --color-sunset-glow: #FB923C;
-  /* Orange-400 */
+  /* Map Utilities to CSS Variables for Dynamic Swapping */
+  --color-neon-blue: var(--color-neon-blue);
+  --color-neon-orange: var(--color-neon-orange);
+  --color-soil-primary: var(--color-soil-primary);
+  --color-soil-secondary: var(--color-soil-secondary);
+  --color-sunset-glow: var(--color-sunset-glow);
+  --color-accent-pop: var(--color-accent-pop);
 }
 
 :root {
