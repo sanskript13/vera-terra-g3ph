@@ -41,28 +41,11 @@ body {
   background-size: 40px 40px;
 }
 
-/* --- THEME VARIATIONS (Design Lab) --- */
-
-/* 1. Deep Cyber (Iron Man HUD) */
-.theme-cyber {
-  --background: #02040a;
-  --foreground: #e0f2fe;
-  --color-neon-blue: #00ff00;
-  /* Toxic Green / Cyber */
-  --color-neon-orange: #d946ef;
-  /* Magenta */
-  --color-soil-primary: #111827;
-}
-
-/* 2. Raw Soil (Nat Geo Realism) */
-.theme-soil {
-  --background: #1a1510;
-  /* Dark Brown/Black */
-  --foreground: #f3e8dd;
-  /* Cream */
-  --color-neon-blue: #d2691e;
-  /* Earth Orange essentially replaces the neon */
-  --color-neon-orange: #8b4513;
+--foreground: #f3e8dd;
+/* Cream */
+--color-neon-blue: #d2691e;
+/* Earth Orange essentially replaces the neon */
+--color-neon-orange: #8b4513;
 }
 
 /* 3. Golden Hour (Sunset) */
