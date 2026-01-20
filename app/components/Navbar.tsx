@@ -10,8 +10,9 @@ export function Navbar() {
     const navLinks = [
         { name: 'Çözümler', href: '/cozumler/kurumsal-tedarik-zinciri' },
         { name: 'Metodoloji', href: '/metodoloji' },
-        { name: 'Hakkımızda', href: '/hakkimizda' },
+        { name: 'Blog', href: '/blog' },
         { name: 'Kaynaklar', href: '/kaynaklar' },
+        { name: 'Hakkımızda', href: '/hakkimizda' },
     ];
 
     return (

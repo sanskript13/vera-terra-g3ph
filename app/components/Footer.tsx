@@ -34,8 +34,10 @@ export function Footer() {
                     <h4 className="text-white font-semibold mb-4">Kaynaklar</h4>
                     <ul className="space-y-2 text-sm">
                         <li><Link href="/kaynaklar" className="hover:text-[var(--color-neon-blue)] transition-colors">Kaynak Merkezi</Link></li>
-                        <li><Link href="/kaynaklar/onarici-sozluk" className="hover:text-[var(--color-neon-blue)] transition-colors">Onarıcı Sözlük</Link></li>
+                        <li><Link href="/kaynaklar/vaka-analizleri" className="hover:text-[var(--color-neon-blue)] transition-colors">Vaka Analizleri</Link></li>
                         <li><Link href="/blog" className="hover:text-[var(--color-neon-blue)] transition-colors">Blog</Link></li>
+                        <li><Link href="/sss" className="hover:text-[var(--color-neon-blue)] transition-colors">SSS (FAQ)</Link></li>
+                        <li><Link href="/kaynaklar/onarici-sozluk" className="hover:text-[var(--color-neon-blue)] transition-colors">Onarıcı Sözlük</Link></li>
                     </ul>
                 </div>
             </div>
