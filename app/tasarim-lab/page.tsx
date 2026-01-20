@@ -86,16 +86,16 @@ export default function DesignLabPage() {
 
                         <div className="relative z-20 text-center px-4 max-w-4xl mx-auto">
                             <span className="text-[var(--color-neon-blue)] font-mono text-xs tracking-widest uppercase mb-6 block animate-pulse border border-[var(--color-neon-blue)]/30 inline-block px-3 py-1 rounded-full">
-                                Design System Preview
+                                System v2.1 Live
                             </span>
                             <h1 className="text-5xl md:text-7xl mb-6 tracking-tight" style={{ fontWeight: 'var(--font-heading-weight)' }}>
                                 Toprak. Veri. Kanıt.
                             </h1>
                             <p className="max-w-2xl mx-auto opacity-80 text-lg md:text-xl leading-relaxed mb-10">
-                                Bu arayüz, seçilen tasarım sisteminin (radius, boşluk, font ağırlığı ve renk paleti) anlık yansımasıdır. "Güven" ve "Saha Gerçekliği" dengesini test edin.
+                                Bu arayüz, yeni "Saha Gerçekliği" (System 1) temasını varsayılan olarak kullanır.
                             </p>
                             <div className="flex flex-wrap gap-4 justify-center">
-                                <button className="px-8 py-4 bg-[var(--color-neon-blue)] text-[var(--background)] font-bold hover:opacity-90 transition-all shadow-lg hover:translate-y-[-2px]" style={{ borderRadius: 'var(--radius-md)' }}>
+                                <button className="px-8 py-4 bg-[var(--color-accent-pop)] text-white font-bold hover:opacity-90 transition-all shadow-lg hover:translate-y-[-2px]" style={{ borderRadius: 'var(--radius-md)' }}>
                                     Programı Başlat
                                 </button>
                                 <button className="px-8 py-4 border border-[var(--foreground)]/20 hover:border-[var(--color-neon-blue)] hover:text-[var(--color-neon-blue)] transition-all bg-[var(--background)]/50 backdrop-blur-sm" style={{ borderRadius: 'var(--radius-md)' }}>
@@ -157,8 +157,8 @@ export default function DesignLabPage() {
                                         <div className="h-8 w-full bg-[var(--color-neon-blue)]" style={{ borderRadius: 'var(--radius-sm)' }}></div>
                                     </div>
                                     <div>
-                                        <div className="text-xs opacity-40 mb-1">Secondary Color</div>
-                                        <div className="h-8 w-full bg-[var(--color-neon-orange)]" style={{ borderRadius: 'var(--radius-sm)' }}></div>
+                                        <div className="text-xs opacity-40 mb-1">Accent (Pop)</div>
+                                        <div className="h-8 w-full bg-[var(--color-accent-pop)]" style={{ borderRadius: 'var(--radius-sm)' }}></div>
                                     </div>
                                 </div>
                             </div>
