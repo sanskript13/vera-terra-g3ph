@@ -12,7 +12,7 @@ export default function CorporateSolutionsPage() {
             <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
                 <DataGrid className="z-10 opacity-40" />
                 <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black z-0">
-                    <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2500')] bg-cover bg-center mix-blend-overlay opacity-30"></div>
+                    <div className="absolute inset-0 bg-[url('/assets/corporate/network.png')] bg-cover bg-center mix-blend-overlay opacity-30"></div>
                 </div>
                 <div className="relative z-20 container mx-auto px-4 text-center max-w-4xl pt-20">
                     <span className="text-[var(--color-neon-blue)] font-mono text-sm tracking-wider uppercase mb-4 block">Kurumsal Tedarik Zinciri Programları</span>
