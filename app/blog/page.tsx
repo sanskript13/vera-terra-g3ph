@@ -26,7 +26,7 @@ export default function BlogPage() {
             {/* Featured Post */}
             <section className="py-12 bg-black border-b border-white/10">
                 <div className="container mx-auto px-4">
-                    <div className="grid md:grid-cols-2 gap-8 items-center bg-white/5 border border-white/10 rounded-xl overflow-hidden hover:border-[var(--color-neon-blue)]/50 transition-colors group">
+                    <Link href="/blog/kurumsal-iklim-hedeflerinde-flag-rehberi-nedir" className="grid md:grid-cols-2 gap-8 items-center bg-white/5 border border-white/10 rounded-xl overflow-hidden hover:border-[var(--color-neon-blue)]/50 transition-colors group">
                         <div className="h-64 md:h-96 relative grayscale group-hover:grayscale-0 transition-all duration-700">
                             <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1000')] bg-cover bg-center"></div>
                             <div className="absolute top-4 left-4 bg-[var(--color-neon-blue)] text-black px-3 py-1 font-bold text-xs uppercase rounded">Öne Çıkan</div>
@@ -41,7 +41,7 @@ export default function BlogPage() {
                                 <span className="text-white group-hover:translate-x-2 transition-transform">Devamını Oku →</span>
                             </div>
                         </div>
-                    </div>
+                    </Link>
                 </div>
             </section>
 
