@@ -15,14 +15,46 @@
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* System 1 Light (Default) */
+  --background: #fdfdfc;
+  --foreground: #1f2937;
+
+  /* Primary Brand Colors (Olive/Nature) */
+  --color-neon-blue: #5f6f52;
+  /* Olive Green (Primary) */
+  --color-neon-orange: #b98b5a;
+  /* Natural Amber (Secondary) */
+  --color-soil-primary: #8B4513;
+  --color-soil-secondary: #D2691E;
+  --color-sunset-glow: #FB923C;
+
+  /* NEW: Universal Attention Accent (Signal Persimmon) */
+  /* Works on both Light Olive and Dark Charcoal */
+  --color-accent-pop: #FF6B35;
+
+  /* Structural Tokens */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.375rem;
+  /* System 1 choice */
+  --radius-lg: 0.5rem;
+  --border-width: 1px;
+  --font-heading-weight: 600;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* System 1 Dark */
+    --background: #1c1c1e;
+    --foreground: #f0f0f0;
+
+    /* Adjusted for Dark Mode contrast */
+    --color-neon-blue: #7a8a6b;
+    /* Lighter Olive */
+    --color-neon-orange: #d4a778;
+    /* Lighter Amber */
+    /* Accent remains vibrant */
+    --color-accent-pop: #FF8657;
+    /* Slightly lighter for dark mode */
   }
 }
 
@@ -34,10 +66,11 @@ body {
 }
 
 /* Utilities for Data Grid overlay */
+/* Updated to use the primary olive tone instead of hard-coded cyan */
 .data-grid-overlay {
   background-image:
-    linear-gradient(to right, rgba(0, 255, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0, 255, 255, 0.05) 1px, transparent 1px);
+    linear-gradient(to right, color-mix(in srgb, var(--color-neon-blue), transparent 90%) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in srgb, var(--color-neon-blue), transparent 90%) 1px, transparent 1px);
   background-size: 40px 40px;
 }
 
