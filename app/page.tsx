@@ -5,14 +5,13 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="min-h-screen font-[family-name:var(--font-sans)] bg-[var(--color-soil-primary)] text-white selection:bg-[var(--color-neon-blue)] selection:text-black">
+    <div className="min-h-screen font-[family-name:var(--font-sans)] bg-[var(--background)] text-[var(--foreground)] selection:bg-[var(--color-neon-blue)] selection:text-black transition-colors duration-300">
       <Navbar />
 
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Placeholder - Replace with Video/Image */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-[var(--color-soil-primary)] z-0">
-          {/* Simulated content behind overlay */}
+        {/* Background Placeholder */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-[var(--background)] z-0">
           <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1625246333195-58197ebd0031?q=80&w=2500&auto=format&fit=crop')] bg-cover bg-center mix-blend-overlay opacity-50"></div>
         </div>
 
@@ -47,14 +46,14 @@ export default function Home() {
       </section>
 
       {/* The Gap Section */}
-      <section className="py-24 bg-black relative">
+      <section className="py-24 bg-[var(--foreground)]/5 relative border-y border-[var(--foreground)]/10">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-white">Teori ile Pratik Arasındaki Uçurum</h2>
-            <p className="text-lg text-gray-400 mb-8 leading-relaxed">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-[var(--foreground)]">Teori ile Pratik Arasındaki Uçurum</h2>
+            <p className="text-lg opacity-80 mb-8 leading-relaxed">
               Onarıcı tarım dünyada hızla yükselirken, sahadaki üretici artan maliyetlerle, kurumsal alıcı ise karmaşık regülasyon baskısıyla (SBTi, Scope 3) boğuşuyor.
               <br /><br />
-              Sadece "yapmak" yetmiyor; yaptığını uluslararası standartlarda <strong className="text-white">kanıtlamak</strong> gerekiyor.
+              Sadece "yapmak" yetmiyor; yaptığını uluslararası standartlarda <strong className="text-[var(--color-neon-blue)]">kanıtlamak</strong> gerekiyor.
               Vera Terra, işte bu "saha gerçeği" ile "kurumsal denetim" arasındaki köprüyü kurar.
             </p>
           </div>
@@ -98,42 +97,42 @@ export default function Home() {
       </section>
 
       {/* Methodology Section */}
-      <section id="metodoloji" className="py-24 bg-[#111]">
+      <section id="metodoloji" className="py-24 bg-[var(--background)]">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-16 text-center text-white">Nasıl Çalışır?</h2>
+          <h2 className="text-3xl font-bold mb-16 text-center text-[var(--foreground)]">Nasıl Çalışır?</h2>
           <div className="grid md:grid-cols-3 gap-12 relative">
             {/* Connector Line */}
-            <div className="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div>
+            <div className="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-[var(--foreground)]/20 to-transparent"></div>
 
             {/* Step 1 */}
             <div className="relative z-10 flex flex-col items-center text-center">
-              <div className="w-24 h-24 rounded-full bg-black border border-gray-700 flex items-center justify-center text-3xl mb-6 shadow-lg shadow-[var(--color-neon-blue)]/5">
+              <div className="w-24 h-24 rounded-full bg-[var(--background)] border border-[var(--foreground)]/20 flex items-center justify-center text-3xl mb-6 shadow-lg text-[var(--foreground)]">
                 📏
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">1. Baseline (Başlangıç)</h3>
-              <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
+              <h3 className="text-xl font-bold text-[var(--foreground)] mb-4">1. Baseline (Başlangıç)</h3>
+              <p className="opacity-60 text-sm leading-relaxed max-w-xs">
                 Nereden başladığımızı bilmeden ilerlemeyi yönetemeyiz. Toprak sağlığı ve karbon ayak izi analizi.
               </p>
             </div>
 
             {/* Step 2 */}
             <div className="relative z-10 flex flex-col items-center text-center">
-              <div className="w-24 h-24 rounded-full bg-black border border-gray-700 flex items-center justify-center text-3xl mb-6 shadow-lg shadow-[var(--color-sunset-glow)]/5">
+              <div className="w-24 h-24 rounded-full bg-[var(--background)] border border-[var(--foreground)]/20 flex items-center justify-center text-3xl mb-6 shadow-lg text-[var(--foreground)]">
                 🌱
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">2. Saha Uygulaması</h3>
-              <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
+              <h3 className="text-xl font-bold text-[var(--foreground)] mb-4">2. Saha Uygulaması</h3>
+              <p className="opacity-60 text-sm leading-relaxed max-w-xs">
                 Reçete verip gitmeyiz. Ziraat mühendislerimizle sahada birebir koçluk ve uygulama takibi.
               </p>
             </div>
 
             {/* Step 3 */}
             <div className="relative z-10 flex flex-col items-center text-center">
-              <div className="w-24 h-24 rounded-full bg-black border border-gray-700 flex items-center justify-center text-3xl mb-6 shadow-lg shadow-[var(--color-neon-blue)]/20">
+              <div className="w-24 h-24 rounded-full bg-[var(--background)] border border-[var(--foreground)]/20 flex items-center justify-center text-3xl mb-6 shadow-lg text-[var(--foreground)]">
                 📊
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">3. İzleme ve Doğrulama</h3>
-              <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
+              <h3 className="text-xl font-bold text-[var(--foreground)] mb-4">3. İzleme ve Doğrulama</h3>
+              <p className="opacity-60 text-sm leading-relaxed max-w-xs">
                 Sadece söz değil, kanıt. Uydu verisi ve saha kayıtlarıyla denetime hazır MRV dosyası.
               </p>
             </div>
@@ -142,19 +141,19 @@ export default function Home() {
       </section>
 
       {/* Why Vera Terra */}
-      <section className="py-24 bg-black border-t border-white/5">
+      <section className="py-24 bg-[var(--foreground)]/5 border-t border-[var(--foreground)]/10">
         <div className="container mx-auto px-4 grid md:grid-cols-3 gap-8">
-          <div className="p-8 border border-white/10 rounded-lg hover:border-[var(--color-neon-blue)]/30 transition-colors">
-            <h4 className="text-xl font-bold text-white mb-4">Saha Gerçekliği</h4>
-            <p className="text-gray-400 text-sm">Programlarımızı masa başında değil, çizme giyerek tasarlarız. Teori değil, pratik.</p>
+          <div className="p-8 border border-[var(--foreground)]/10 rounded-lg hover:border-[var(--color-neon-blue)]/50 transition-colors bg-[var(--background)]">
+            <h4 className="text-xl font-bold text-[var(--foreground)] mb-4">Saha Gerçekliği</h4>
+            <p className="opacity-60 text-sm">Programlarımızı masa başında değil, çizme giyerek tasarlarız. Teori değil, pratik.</p>
           </div>
-          <div className="p-8 border border-white/10 rounded-lg hover:border-[var(--color-neon-blue)]/30 transition-colors">
-            <h4 className="text-xl font-bold text-white mb-4">Kanıt Disiplini</h4>
-            <p className="text-gray-400 text-sm">Yeşil aklama riskini yönetiriz. Ölçülebilir, kanıtlanabilir sınırlar içinde konuşuruz.</p>
+          <div className="p-8 border border-[var(--foreground)]/10 rounded-lg hover:border-[var(--color-neon-blue)]/50 transition-colors bg-[var(--background)]">
+            <h4 className="text-xl font-bold text-[var(--foreground)] mb-4">Kanıt Disiplini</h4>
+            <p className="opacity-60 text-sm">Yeşil aklama riskini yönetiriz. Ölçülebilir, kanıtlanabilir sınırlar içinde konuşuruz.</p>
           </div>
-          <div className="p-8 border border-white/10 rounded-lg hover:border-[var(--color-neon-blue)]/30 transition-colors">
-            <h4 className="text-xl font-bold text-white mb-4">Teknoloji Entegrasyonu</h4>
-            <p className="text-gray-400 text-sm">Operasyonel yükü azaltan, veri odaklı program tasarımı ve raporlama altyapısı.</p>
+          <div className="p-8 border border-[var(--foreground)]/10 rounded-lg hover:border-[var(--color-neon-blue)]/50 transition-colors bg-[var(--background)]">
+            <h4 className="text-xl font-bold text-[var(--foreground)] mb-4">Teknoloji Entegrasyonu</h4>
+            <p className="opacity-60 text-sm">Operasyonel yükü azaltan, veri odaklı program tasarımı ve raporlama altyapısı.</p>
           </div>
         </div>
       </section>
