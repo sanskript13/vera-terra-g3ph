@@ -145,79 +145,99 @@ export default function DesignLabPage() {
                                         <span className="text-5xl" style={{ fontWeight: 'var(--font-heading-weight)' }}>12.4K</span>
                                         <span className="text-sm font-mono opacity-60 mb-1 absolute -right-0 -top-4 text-[var(--color-neon-orange)]">LIVE DATA</span>
                                     </div>
-                                    <div className="text-sm opacity-60 uppercase tracking-widest">Hektar İzleniyor</div>
-                                </div>
+                                    <div className="h-1 w-full bg-[var(--foreground)]/10 overflow-hidden" style={{ borderRadius: 'var(--radius-sm)' }}>
+                                        <div className="h-full w-3/4 bg-[var(--color-neon-blue)]"></div>
+                                    </div>
 
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                                    {/* Design 1 */}
-                                    <Link href="/tasarim-lab/organic-luxury" className="block group">
-                                        <div className="border border-stone-200 bg-[#F9F8F4] p-8 aspect-[4/3] flex flex-col justify-between transition-all hover:shadow-xl relative overflow-hidden">
-                                            <div className="absolute inset-0 bg-[url('/assets/coiumler/organic_luxury_hero_v2.png')] bg-cover bg-center opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                                            <div className="relative z-10">
-                                                <span className="text-xs font-serif italic text-stone-500">Experiment 001</span>
-                                                <h3 className="text-3xl font-serif text-stone-800 mt-2 group-hover:text-white transition-colors">Organic Luxury</h3>
-                                            </div>
-                                            <div className="relative z-10 flex justify-between items-end">
-                                                <span className="text-xs tracking-widest uppercase text-stone-400 group-hover:text-white/80">Silent / Editorial</span>
-                                                <span className="w-8 h-8 rounded-full border border-stone-300 flex items-center justify-center group-hover:bg-white group-hover:text-stone-900 transition-all">→</span>
-                                            </div>
+                                    <div className="grid grid-cols-2 gap-4 pt-4 border-t border-[var(--foreground)]/10">
+                                        <div>
+                                            <div className="text-xs opacity-40 mb-1">Primary Color</div>
+                                            <div className="h-8 w-full bg-[var(--color-neon-blue)]" style={{ borderRadius: 'var(--radius-sm)' }}></div>
                                         </div>
-                                    </Link>
-
-                                    {/* Design 2 */}
-                                    <Link href="/tasarim-lab/precision-ag" className="block group">
-                                        <div className="border border-slate-200 bg-white p-8 aspect-[4/3] flex flex-col justify-between transition-all hover:shadow-xl hover:shadow-cyan-500/20 relative overflow-hidden">
-                                            <div className="absolute inset-0 bg-[url('/assets/coiumler/precision_ag_hero_v2.png')] bg-cover bg-center opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                                            <div className="relative z-10">
-                                                <span className="text-xs font-mono text-slate-500">Experiment 002</span>
-                                                <h3 className="text-3xl font-sans font-medium text-slate-900 mt-2 group-hover:text-white">Precision Ag</h3>
-                                            </div>
-                                            <div className="relative z-10 flex justify-between items-end">
-                                                <span className="text-xs tracking-widest uppercase text-slate-400 group-hover:text-white/80">Tech / SaaS</span>
-                                                <span className="w-8 h-8 rounded-md border border-slate-200 flex items-center justify-center group-hover:bg-[#10B981] group-hover:border-[#10B981] group-hover:text-white transition-all">
-                                                    <span className="font-mono text-[10px]">GO</span>
-                                                </span>
-                                            </div>
+                                        <div>
+                                            <div className="text-xs opacity-40 mb-1">Accent (Pop)</div>
+                                            <div className="h-8 w-full bg-[var(--color-accent-pop)]" style={{ borderRadius: 'var(--radius-sm)' }}></div>
                                         </div>
-                                    </Link>
-
-                                    {/* Design 3 */}
-                                    <Link href="/tasarim-lab/raw-earth" className="block group">
-                                        <div className="border-4 border-black bg-[#EFECE5] p-8 aspect-[4/3] flex flex-col justify-between transition-all hover:bg-black hover:text-[#CCFF00] relative overflow-hidden">
-                                            <div className="absolute inset-0 bg-[url('/assets/coiumler/raw_earth_hero.png')] bg-cover bg-center opacity-0 group-hover:opacity-40 transition-opacity duration-100 grayscale"></div>
-                                            <div className="relative z-10">
-                                                <span className="text-xs font-black uppercase tracking-tighter">Experiment 003</span>
-                                                <h3 className="text-4xl font-black uppercase mt-2 leading-[0.8]">Raw<br />Earth</h3>
-                                            </div>
-                                            <div className="relative z-10 flex justify-between items-end">
-                                                <span className="text-xs font-bold uppercase tracking-widest">Brutalist / Wild</span>
-                                                <span className="text-2xl font-black">↗</span>
-                                            </div>
-                                        </div>
-                                    </Link>
-
-                                    {/* Design 4 */}
-                                    <Link href="/tasarim-lab/futuristic" className="block group">
-                                        <div className="border border-[#06B6D4]/30 bg-[#030712] p-8 aspect-[4/3] flex flex-col justify-between transition-all hover:border-[#00FF9D] relative overflow-hidden">
-                                            <div className="absolute inset-0 bg-[url('/assets/coiumler/futuristic_hero.png')] bg-cover bg-center opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                                            {/* Scanline overlay */}
-                                            <div className="absolute inset-0 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] bg-[length:100%_2px,3px_100%] opacity-20 pointer-events-none"></div>
-
-                                            <div className="relative z-10">
-                                                <span className="text-xs font-mono text-[#06B6D4]">EXP_004</span>
-                                                <h3 className="text-3xl font-mono text-[#E0F2FE] mt-2 group-hover:text-[#00FF9D] text-shadow-neon">Futuristic</h3>
-                                            </div>
-                                            <div className="relative z-10 flex justify-between items-end">
-                                                <span className="text-xs tracking-widest uppercase text-[#06B6D4]/70">Cyber / Space</span>
-                                                <span className="w-8 h-8 border border-[#06B6D4] flex items-center justify-center group-hover:bg-[#06B6D4] group-hover:text-black transition-all">
-                                                    +
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </Link>
+                                    </div>
                                 </div>
                             </div>
+                        </div>
+                    </section>
 
+                    {/* NEW EXPERIMENTS SECTION */}
+                    <section className="py-24 px-12 md:px-24 bg-black/20 border-t border-white/10">
+                        <div className="max-w-7xl mx-auto">
+                            <h2 className="text-4xl mb-12 border-l-4 border-[var(--color-neon-blue)] pl-6" style={{ fontWeight: 'var(--font-heading-weight)' }}>
+                                Design Experiments (System 2 Candidates)
+                            </h2>
+
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                {/* Design 1 */}
+                                <Link href="/tasarim-lab/organic-luxury" className="block group">
+                                    <div className="border border-stone-200 bg-[#F9F8F4] p-8 aspect-video flex flex-col justify-between transition-all hover:shadow-xl relative overflow-hidden group-hover:scale-[1.01] duration-500">
+                                        <div className="absolute inset-0 bg-[url('/assets/coiumler/organic_luxury_hero_v2.png')] bg-cover bg-center opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                                        <div className="relative z-10">
+                                            <span className="text-xs font-serif italic text-stone-500 bg-white/50 px-2 py-1 backdrop-blur-md">Experiment 001</span>
+                                            <h3 className="text-3xl font-serif text-stone-800 mt-2 group-hover:text-white transition-colors bg-white/50 group-hover:bg-black/20 inline-block px-2">Organic Luxury</h3>
+                                        </div>
+                                        <div className="relative z-10 flex justify-between items-end">
+                                            <span className="text-xs tracking-widest uppercase text-stone-400 group-hover:text-white/80 bg-white/80 group-hover:bg-transparent px-2">Silent / Editorial</span>
+                                            <span className="w-10 h-10 rounded-full border border-stone-300 flex items-center justify-center bg-white text-stone-900 group-hover:bg-stone-800 group-hover:text-white transition-all shadow-lg">→</span>
+                                        </div>
+                                    </div>
+                                </Link>
+
+                                {/* Design 2 */}
+                                <Link href="/tasarim-lab/precision-ag" className="block group">
+                                    <div className="border border-slate-200 bg-white p-8 aspect-video flex flex-col justify-between transition-all hover:shadow-xl hover:shadow-cyan-500/20 relative overflow-hidden group-hover:scale-[1.01] duration-500">
+                                        <div className="absolute inset-0 bg-[url('/assets/coiumler/precision_ag_hero_v2.png')] bg-cover bg-center opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                                        <div className="relative z-10">
+                                            <span className="text-xs font-mono text-slate-500 bg-slate-100 px-2 py-1">Experiment 002</span>
+                                            <h3 className="text-3xl font-sans font-medium text-slate-900 mt-2 group-hover:text-white bg-slate-50 group-hover:bg-black/20 inline-block px-2">Precision Ag</h3>
+                                        </div>
+                                        <div className="relative z-10 flex justify-between items-end">
+                                            <span className="text-xs tracking-widest uppercase text-slate-400 group-hover:text-white/80 bg-white group-hover:bg-transparent px-2">Tech / SaaS</span>
+                                            <span className="w-10 h-10 rounded-md border border-slate-200 flex items-center justify-center bg-white text-slate-900 group-hover:bg-[#10B981] group-hover:border-[#10B981] group-hover:text-white transition-all shadow-lg">
+                                                <span className="font-mono text-[10px]">GO</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </Link>
+
+                                {/* Design 3 */}
+                                <Link href="/tasarim-lab/raw-earth" className="block group">
+                                    <div className="border-4 border-black bg-[#EFECE5] p-8 aspect-video flex flex-col justify-between transition-all hover:bg-black hover:text-[#CCFF00] relative overflow-hidden group-hover:scale-[1.01] duration-500">
+                                        <div className="absolute inset-0 bg-[url('/assets/coiumler/raw_earth_hero.png')] bg-cover bg-center opacity-0 group-hover:opacity-40 transition-opacity duration-100 grayscale"></div>
+                                        <div className="relative z-10">
+                                            <span className="text-xs font-black uppercase tracking-tighter bg-[#CCFF00] text-black px-2 py-1">Experiment 003</span>
+                                            <h3 className="text-4xl font-black uppercase mt-2 leading-[0.8]">Raw<br />Earth</h3>
+                                        </div>
+                                        <div className="relative z-10 flex justify-between items-end">
+                                            <span className="text-xs font-bold uppercase tracking-widest bg-white/80 px-2 group-hover:text-black">Brutalist / Wild</span>
+                                            <span className="text-4xl font-black">↗</span>
+                                        </div>
+                                    </div>
+                                </Link>
+
+                                {/* Design 4 */}
+                                <Link href="/tasarim-lab/futuristic" className="block group">
+                                    <div className="border border-[#06B6D4]/30 bg-[#030712] p-8 aspect-video flex flex-col justify-between transition-all hover:border-[#00FF9D] relative overflow-hidden group-hover:scale-[1.01] duration-500">
+                                        <div className="absolute inset-0 bg-[url('/assets/coiumler/futuristic_hero.png')] bg-cover bg-center opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                                        <div className="absolute inset-0 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] bg-[length:100%_2px,3px_100%] opacity-20 pointer-events-none"></div>
+
+                                        <div className="relative z-10">
+                                            <span className="text-xs font-mono text-[#06B6D4] border border-[#06B6D4] px-2 py-1 bg-black/50">EXP_004</span>
+                                            <h3 className="text-3xl font-mono text-[#E0F2FE] mt-2 group-hover:text-[#00FF9D] text-shadow-neon bg-black/50 inline-block px-2">Futuristic</h3>
+                                        </div>
+                                        <div className="relative z-10 flex justify-between items-end">
+                                            <span className="text-xs tracking-widest uppercase text-[#06B6D4]/70 bg-black/80 px-2">Cyber / Space</span>
+                                            <span className="w-10 h-10 border border-[#06B6D4] flex items-center justify-center text-[#06B6D4] group-hover:bg-[#06B6D4] group-hover:text-black transition-all shadow-[0_0_10px_#06B6D4]">
+                                                +
+                                            </span>
+                                        </div>
+                                    </div>
+                                </Link>
+                            </div>
                         </div>
                     </section>
 
