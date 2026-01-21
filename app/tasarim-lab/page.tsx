@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { DataGrid } from "@/app/components/DataGrid";
 
 export default function DesignLabPage() {
@@ -241,6 +242,35 @@ export default function DesignLabPage() {
                                             <span className="w-10 h-10 border border-[#06B6D4] flex items-center justify-center text-[#06B6D4] group-hover:bg-[#06B6D4] group-hover:text-black transition-all shadow-[0_0_10px_#06B6D4]">
                                                 +
                                             </span>
+                                        </div>
+                                    </div>
+                                </Link>
+
+                                {/* Design 5: Home v2 */}
+                                <Link href="/tasarim-lab/v2" className="block group md:col-span-2">
+                                    <div className="border border-amber-900/10 bg-[#FDFDFC] p-8 min-h-[400px] flex flex-col md:flex-row gap-12 items-center transition-all hover:shadow-2xl relative overflow-hidden group-hover:scale-[1.01] duration-500">
+                                        <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#5F6F52]/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+
+                                        <div className="w-full md:w-1/2 relative aspect-[4/3] rounded-xl overflow-hidden shadow-lg border border-gray-100">
+                                            <Image
+                                                src="/assets/coiumler/home_v2_hero.png"
+                                                alt="Home v2 Preview"
+                                                fill
+                                                className="object-cover transition-transform duration-1000 group-hover:scale-110"
+                                            />
+                                        </div>
+
+                                        <div className="w-full md:w-1/2 relative z-10">
+                                            <span className="text-xs font-mono font-bold text-[#5F6F52] bg-[#5F6F52]/10 px-3 py-1 rounded-full mb-6 inline-block">Experiment 005_BETA</span>
+                                            <h3 className="text-4xl font-bold text-[#2B1D16] mb-4">Homepage v2: <span className="text-[#5F6F52]">Agronomy Layer</span></h3>
+                                            <p className="text-gray-600 mb-8 leading-relaxed">
+                                                Teknik agronomi terimlerini (SOM, SOC, WHC) merkeze alan, kurumsal ve saha gerçekliğini birleştiren yeni içerik kurgusu. Timeline, MRV disiplini ve detaylı SSS blokları içerir.
+                                            </p>
+                                            <div className="flex items-center gap-4">
+                                                <span className="px-3 py-1 bg-gray-100 text-gray-500 text-[10px] font-bold tracking-widest uppercase rounded">Professional</span>
+                                                <span className="px-3 py-1 bg-gray-100 text-gray-500 text-[10px] font-bold tracking-widest uppercase rounded">Evidence-Based</span>
+                                                <span className="text-2xl font-bold text-[#5F6F52] ml-auto">→</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </Link>
