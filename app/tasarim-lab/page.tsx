@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { DataGrid } from "@/app/components/DataGrid";
 
 export default function DesignLabPage() {
@@ -230,4 +231,3 @@ export default function DesignLabPage() {
         </div>
     );
 }
-```
