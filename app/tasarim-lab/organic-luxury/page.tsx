@@ -1,14 +1,9 @@
-import { Playfair_Display, Inter } from "next/font/google";
 import Link from "next/link";
 import Image from "next/image";
 
-// Load fonts specifically for this design
-const playfair = Playfair_Display({ subsets: ["latin"], weight: ["400", "600", "700"], variable: "--font-playfair" });
-const inter = Inter({ subsets: ["latin"], weight: ["300", "400", "500"], variable: "--font-inter" });
-
 export default function OrganicLuxuryPage() {
     return (
-        <div className={`min-h-screen ${playfair.variable} ${inter.variable} font-sans selection:bg-[#6B705C] selection:text-[#F9F8F4]`} style={{ backgroundColor: "#F9F8F4", color: "#2C2C2C" }}>
+        <div className="min-h-screen font-sans selection:bg-[#6B705C] selection:text-[#F9F8F4]" style={{ backgroundColor: "#F9F8F4", color: "#2C2C2C" }}>
 
             {/* Custom Navbar for this Design */}
             <nav className="fixed w-full z-50 top-0 start-0 p-8 flex justify-between items-center mix-blend-difference text-[#F9F8F4]">
@@ -29,7 +24,7 @@ export default function OrganicLuxuryPage() {
                 {/* Asymmetric Image */}
                 <div className="absolute md:right-[15%] md:top-[20%] w-full md:w-[40vw] h-[60vh] z-10 overflow-hidden shadow-2xl sepia-[.2] contrast-[.9]">
                     {/* Using existing asset as placeholder but styled differently */}
-                    <div className="absolute inset-0 bg-[url('/assets/coiumler/vera-story.png')] bg-cover bg-center scale-110 opacity-90"></div>
+                    <div className="absolute inset-0 bg-[url('/assets/coiumler/organic_luxury_hero_v2.png')] bg-cover bg-center scale-110 opacity-90"></div>
                 </div>
 
                 <div className="relative z-20 max-w-2xl mt-48 md:mt-0">
