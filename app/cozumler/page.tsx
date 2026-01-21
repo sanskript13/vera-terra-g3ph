@@ -153,6 +153,33 @@ export default function SolutionsHubPage() {
                 </div>
             </section>
 
+            {/* PRODUCT SPECIFIC SOLUTIONS */}
+            <section className="py-24 bg-[#FDF6E3]">
+                <div className="container mx-auto px-4 max-w-6xl text-center">
+                    <h2 className="text-3xl font-bold mb-12 text-[#2B1D16]">Ürüne Özel Onarıcı Programlar</h2>
+                    <div className="grid md:grid-cols-1 max-w-2xl mx-auto">
+                        <Link href="/cozumler/antep-fistigi" className="group bg-white p-2 rounded-2xl shadow-xl border border-white hover:border-[#93C572] transition-all overflow-hidden flex flex-col md:flex-row items-center gap-8">
+                            <div className="w-full md:w-48 h-48 relative rounded-xl overflow-hidden shrink-0">
+                                <img src="/assets/coiumler/antep_fistigi_hero.png" alt="Antep Fıstığı" className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-700" />
+                            </div>
+                            <div className="flex-1 text-left p-4">
+                                <div className="flex items-center gap-2 mb-2">
+                                    <span className="w-2 h-2 rounded-full bg-[#D95D5D] animate-pulse"></span>
+                                    <span className="text-[10px] font-bold text-[#D95D5D] uppercase tracking-widest">Specialized Module</span>
+                                </div>
+                                <h3 className="text-2xl font-bold text-[#2B1D16] mb-2 group-hover:text-[#5F6F52] transition-colors">Antep Fıstığı Çözümleri</h3>
+                                <p className="text-sm text-[#2B1D16]/70 leading-relaxed mb-4">
+                                    Aflatoksin yönetimi, "yok yılı" verim kaybı riskini azaltma ve onarıcı tarım pratikleriyle fıstık bahçelerini geleceğe taşıyın.
+                                </p>
+                                <span className="text-[#5F6F52] font-bold inline-flex items-center gap-2">
+                                    Program Detayları <span className="text-xl">→</span>
+                                </span>
+                            </div>
+                        </Link>
+                    </div>
+                </div>
+            </section>
+
             <Footer />
         </div>
     );
