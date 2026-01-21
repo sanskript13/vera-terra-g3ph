@@ -82,35 +82,35 @@ export default function SolutionsHubPage() {
                         {/* Connecting Line (Desktop) */}
                         <div className="hidden md:block absolute top-12 left-0 w-full h-[1px] bg-[var(--foreground)]/10 -z-10"></div>
 
-                        <div className="bg-[var(--background)] p-8 rounded-xl shadow-sm border border-[var(--foreground)]/10 relative">
-                            <div className="w-24 h-24 bg-[var(--color-neon-blue)]/10 rounded-full flex items-center justify-center mx-auto mb-6 text-4xl shadow-inner">
+                        <Link href="/cozumler/toprak-sagligi" className="bg-[var(--background)] p-8 rounded-xl shadow-sm border border-[var(--foreground)]/10 relative hover:border-[var(--color-neon-blue)] transition-colors group">
+                            <div className="w-24 h-24 bg-[var(--color-neon-blue)]/10 rounded-full flex items-center justify-center mx-auto mb-6 text-4xl shadow-inner group-hover:scale-110 transition-transform">
                                 🌱
                             </div>
-                            <h3 className="text-xl font-bold mb-4">Toprak Sağlığı</h3>
+                            <h3 className="text-xl font-bold mb-4 group-hover:text-[var(--color-neon-blue)] transition-colors">Toprak Sağlığı</h3>
                             <p className="text-sm opacity-70 leading-relaxed">
                                 Karbon tutulumu ve su tutma kapasitesi, hem iklim hedefleri hem de verim için ortaktır.
                             </p>
-                        </div>
+                        </Link>
 
-                        <div className="bg-[var(--background)] p-8 rounded-xl shadow-sm border border-[var(--foreground)]/10 relative">
-                            <div className="w-24 h-24 bg-[var(--color-neon-orange)]/10 rounded-full flex items-center justify-center mx-auto mb-6 text-4xl shadow-inner">
+                        <Link href="/cozumler/veri-mrv" className="bg-[var(--background)] p-8 rounded-xl shadow-sm border border-[var(--foreground)]/10 relative hover:border-[var(--color-neon-orange)] transition-colors group">
+                            <div className="w-24 h-24 bg-[var(--color-neon-orange)]/10 rounded-full flex items-center justify-center mx-auto mb-6 text-4xl shadow-inner group-hover:scale-110 transition-transform">
                                 🛰️
                             </div>
-                            <h3 className="text-xl font-bold mb-4">Veri & MRV</h3>
+                            <h3 className="text-xl font-bold mb-4 group-hover:text-[var(--color-neon-orange)] transition-colors">Veri & MRV</h3>
                             <p className="text-sm opacity-70 leading-relaxed">
                                 Ölçülebilir, Raporlanabilir ve Doğrulanabilir (MRV) veri, güvenin temelidir.
                             </p>
-                        </div>
+                        </Link>
 
-                        <div className="bg-[var(--background)] p-8 rounded-xl shadow-sm border border-[var(--foreground)]/10 relative">
-                            <div className="w-24 h-24 bg-purple-500/10 rounded-full flex items-center justify-center mx-auto mb-6 text-4xl shadow-inner">
+                        <Link href="/cozumler/adil-ticaret" className="bg-[var(--background)] p-8 rounded-xl shadow-sm border border-[var(--foreground)]/10 relative hover:border-purple-500 transition-colors group">
+                            <div className="w-24 h-24 bg-purple-500/10 rounded-full flex items-center justify-center mx-auto mb-6 text-4xl shadow-inner group-hover:scale-110 transition-transform">
                                 🤝
                             </div>
-                            <h3 className="text-xl font-bold mb-4">Adil Ticaret</h3>
+                            <h3 className="text-xl font-bold mb-4 group-hover:text-purple-500 transition-colors">Adil Ticaret</h3>
                             <p className="text-sm opacity-70 leading-relaxed">
                                 Üreticinin kazandığı, markanın riskini yönettiği sürdürülebilir bir iş modeli.
                             </p>
-                        </div>
+                        </Link>
                     </div>
                 </div>
             </section>
