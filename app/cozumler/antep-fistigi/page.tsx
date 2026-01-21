@@ -60,33 +60,96 @@ export default function AntepFistigiPage() {
             <section className="py-24 px-6 bg-[#2B1D16] text-white overflow-hidden relative">
                 <div className="absolute top-0 right-0 w-1/2 h-full bg-[#D95D5D]/5 skew-x-12 transform origin-top-right"></div>
                 <div className="max-w-7xl mx-auto relative z-10">
-                    <div className="max-w-3xl">
-                        <h2 className="text-4xl font-bold mb-12">Kritik Tehditler</h2>
-                        <p className="text-xl opacity-80 mb-16 leading-relaxed">
-                            Fıstık üreticisinin uykusunu kaçıran iki büyük gerçek:
+                    <div className="max-w-3xl mb-16">
+                        <h2 className="text-4xl font-bold mb-6">Kritik Tehditler</h2>
+                        <p className="text-xl opacity-70 leading-relaxed">
+                            Fıstık üreticisinin karşı karşıya olduğu temel bariyerler ve onarıcı çözüm yaklaşımlarımız:
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                        <div className="p-10 border border-white/10 bg-white/5 rounded-3xl hover:border-[#D95D5D]/50 transition-all group">
-                            <div className="text-4xl mb-6">☣️</div>
-                            <h3 className="text-2xl font-bold mb-4 text-[#D95D5D]">1. Aflatoksin Riski</h3>
-                            <p className="opacity-70 leading-relaxed">
-                                İhracat kapılarının yüzünüze kapanma sebebi olan gıda güvenliği tehdidi. Mantar kaynaklı bu risk, sadece bir gıda güvenliği konusu değil, aynı zamanda ekonomik bir yıkımdır.
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {/* 1. Aflatoksin */}
+                        <div className="p-8 border border-white/10 bg-white/5 rounded-3xl hover:border-[#D95D5D]/50 transition-all flex flex-col h-full">
+                            <span className="text-xs font-mono text-[#D95D5D] mb-4">01_GIDA_GUVENLIGI</span>
+                            <h3 className="text-xl font-bold mb-4">Aflatoksin Riski: Gıda Güvenliği ve İtibar Eşiği</h3>
+                            <p className="text-sm opacity-60 leading-relaxed mb-6 flex-grow">
+                                İhracat pazarlarında en kritik bariyer olan bu toksin riski, sadece ekonomik bir kayıp değil, bir gıda güvenliği krizidir. Aspergillus tipi mantarların nem ve sıcaklık etkisiyle ürettiği aflatoksin, özellikle hasat öncesi doğru sulama yönetimi ve zamanında hasat ile yasal limitlerin altında tutulabilir.
                             </p>
+                            <div className="pt-4 border-t border-white/10 mt-auto">
+                                <span className="text-[10px] font-bold text-[#93C572] uppercase tracking-wider block mb-1">Onarıcı Çözüm:</span>
+                                <p className="text-xs italic opacity-90">Hasat öncesi nem yönetimi ve toprak sağlığı temelli önleyici yaklaşımlar.</p>
+                            </div>
                         </div>
-                        <div className="p-10 border border-white/10 bg-white/5 rounded-3xl hover:border-[#93C572]/50 transition-all group">
-                            <div className="text-4xl mb-6">🍂</div>
-                            <h3 className="text-2xl font-bold mb-4 text-[#93C572]">2. Karazenk (Septoria)</h3>
-                            <p className="opacity-70 leading-relaxed">
-                                Yaprağın erken dökülmesi ve ağacın "küsemesi" sonucu verim kaybı. Ağaç gücünü kaybeder, gelecek yılı koruyamaz.
+
+                        {/* 2. Karazenk */}
+                        <div className="p-8 border border-white/10 bg-white/5 rounded-3xl hover:border-[#93C572]/50 transition-all flex flex-col h-full">
+                            <span className="text-xs font-mono text-[#93C572] mb-4">02_YAPRAK_SAGLIGI</span>
+                            <h3 className="text-xl font-bold mb-4">Karazenk (Septoria): Yaprak Sağlığı ve Verim Sürekliliği</h3>
+                            <p className="text-sm opacity-60 leading-relaxed mb-6 flex-grow">
+                                Halk arasında ağacın "küsemesi" olarak bilinen Karazenk (Septoria), yaprakların vaktinden önce dökülmesine neden olarak fotosentez döngüsünü kesintiye uğratır. Bu durum ağacın sadece o yılki verimini değil, bir sonraki yılın rezervlerini de tüketir.
                             </p>
+                            <div className="pt-4 border-t border-white/10 mt-auto">
+                                <span className="text-[10px] font-bold text-[#93C572] uppercase tracking-wider block mb-1">Onarıcı Çözüm:</span>
+                                <p className="text-xs italic opacity-90">Budama ile hava sirkülasyonunun artırılması ve bağışıklık sistemini destekleyen kültürel önlemler.</p>
+                            </div>
+                        </div>
+
+                        {/* 3. Toprak Çölleşmesi */}
+                        <div className="p-8 border border-white/10 bg-white/5 rounded-3xl hover:border-amber-500/50 transition-all flex flex-col h-full">
+                            <span className="text-xs font-mono text-amber-500 mb-4">03_TOPRAK_YAPISI</span>
+                            <h3 className="text-xl font-bold mb-4">Toprak Çölleşmesi ve Agregat Kaybı</h3>
+                            <p className="text-sm opacity-60 leading-relaxed mb-6 flex-grow">
+                                Yıllarca süren yoğun toprak işleme ve kontrolsüz girdi kullanımı, toprağın "yaşayan bir sünger" olma özelliğini yok eder. SOM (Toprak Organik Maddesi) tükendiğinde toprak betonlaşır; suyun infiltrasyon hızı düşer ve kök bölgesi yeterli oksijene ulaşamaz.
+                            </p>
+                            <div className="pt-4 border-t border-white/10 mt-auto">
+                                <span className="text-[10px] font-bold text-[#93C572] uppercase tracking-wider block mb-1">Onarıcı Çözüm:</span>
+                                <p className="text-xs italic opacity-90">Örtü bitkileri ve minimum toprak işleme ile biyolojik yapının restorasyonu.</p>
+                            </div>
+                        </div>
+
+                        {/* 4. Periyodisite */}
+                        <div className="p-8 border border-white/10 bg-white/5 rounded-3xl hover:border-blue-500/50 transition-all flex flex-col h-full">
+                            <span className="text-xs font-mono text-blue-500 mb-4">04_VERIM_MAKASI</span>
+                            <h3 className="text-xl font-bold mb-4">Periyodisite (Var - Yok Yılı) Makası</h3>
+                            <p className="text-sm opacity-60 leading-relaxed mb-6 flex-grow">
+                                Üreticinin kaderi olarak görülen verim dalgalanması, aslında ağacın sınırlı kaynaklarla başa çıkma çabasıdır. Toprak altı mikrobiyal ağ (mikoriza) koptuğunda, ağaç besin kaynaklarını yönetemez. Onarıcı yöntemlerle verim arasındaki makas belirgin şekilde daraltılabilir.
+                            </p>
+                            <div className="pt-4 border-t border-white/10 mt-auto">
+                                <span className="text-[10px] font-bold text-[#93C572] uppercase tracking-wider block mb-1">Onarıcı Çözüm:</span>
+                                <p className="text-xs italic opacity-90">Dengeli besleme yönetimi ve toprak mikrobiyolojisinin güçlendirilmesi.</p>
+                            </div>
+                        </div>
+
+                        {/* 5. Kuraklık */}
+                        <div className="p-8 border border-white/10 bg-white/5 rounded-3xl hover:border-orange-500/50 transition-all flex flex-col h-full">
+                            <span className="text-xs font-mono text-orange-500 mb-4">05_IKLIM_SOKU</span>
+                            <h3 className="text-xl font-bold mb-4">Kuraklık ve Mikro-İklim Şoku</h3>
+                            <p className="text-sm opacity-60 leading-relaxed mb-6 flex-grow">
+                                Artan kavurucu sıcaklar karşısında çıplak kalan toprak "pişer". Toprak yüzeyi örtüsüz bırakıldığında su hızla buharlaşır ve kök bölgesi aşırı ısınarak bitki metabolizmasını durma noktasına getirir. Bu bir susuzluk krizinden öte, bağışıklık sisteminin çöküşüdür.
+                            </p>
+                            <div className="pt-4 border-t border-white/10 mt-auto">
+                                <span className="text-[10px] font-bold text-[#93C572] uppercase tracking-wider block mb-1">Onarıcı Çözüm:</span>
+                                <p className="text-xs italic opacity-90">Kaolin kili gibi doğal zırhlar ve toprağı güneşten koruyan örtü bitkileri.</p>
+                            </div>
+                        </div>
+
+                        {/* 6. Ekosistem Sessizliği */}
+                        <div className="p-8 border border-white/10 bg-white/5 rounded-3xl hover:border-emerald-500/50 transition-all flex flex-col h-full">
+                            <span className="text-xs font-mono text-emerald-500 mb-4">06_BIYOLOJIK_DENGE</span>
+                            <h3 className="text-xl font-bold mb-4">Ekosistem Sessizliği: Tozlaşma ve Biyolojik Denge</h3>
+                            <p className="text-sm opacity-60 leading-relaxed mb-6 flex-grow">
+                                Kontrolsüz pestisit kullanımı, bahçeyi koruyan "dost" böcekleri ve tozlayıcıları yok eder. Doğal denge bozulduğunda zararlılarla mücadele imkansızlaşır; bahçe dış müdahaleye mahkûm bir "hasta"ya dönüşür.
+                            </p>
+                            <div className="pt-4 border-t border-white/10 mt-auto">
+                                <span className="text-[10px] font-bold text-[#93C572] uppercase tracking-wider block mb-1">Onarıcı Çözüm:</span>
+                                <p className="text-xs italic opacity-90">IPM (Entegre Zararlı Yönetimi) stratejileri ve faydalı böcek habitatlarının korunması.</p>
+                            </div>
                         </div>
                     </div>
 
                     <div className="mt-20 p-8 border-l-4 border-[#93C572] bg-[#93C572]/10 rounded-r-xl">
                         <p className="text-2xl font-medium italic opacity-90">
-                            "Biz 'daha fazla ilaç atın' demiyoruz. Biz, ağacın bağışıklığını güçlendiriyoruz."
+                            "Biz 'daha fazla ilaç atın' demiyoruz. Biz, karmaşık sorunlara, doğanın onarım gücünü temel alan bütüncül yanıtlar veriyoruz."
                         </p>
                     </div>
                 </div>
