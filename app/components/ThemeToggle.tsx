@@ -42,8 +42,8 @@ export function ThemeToggle() {
         <button
             onClick={toggleTheme}
             className={`relative p-2 rounded-full transition-all duration-500 overflow-hidden group ${theme === "dark"
-                    ? "bg-[var(--color-neon-blue)]/20 hover:bg-[var(--color-neon-blue)]/30 text-[var(--color-neon-blue)]"
-                    : "bg-orange-100 hover:bg-orange-200 text-orange-600"
+                ? "bg-orange-100 hover:bg-orange-200 text-orange-600 shadow-md ring-2 ring-orange-200"
+                : "bg-[var(--foreground)] text-[var(--background)] ring-1 ring-[var(--foreground)]/20 hover:scale-105"
                 }`}
             aria-label="Toggle Theme"
             title={theme === "light" ? "Switch to Dark Mode (Soil)" : "Switch to Light Mode (Sun)"}
