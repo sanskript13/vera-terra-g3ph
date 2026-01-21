@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { ThemeToggle } from './ThemeToggle';
 
 export function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -43,6 +44,9 @@ export function Navbar() {
                                 </Link>
                             </li>
                         ))}
+                        <li className="flex items-center justify-start md:justify-center">
+                            <ThemeToggle />
+                        </li>
                         <li>
                             <Link
                                 href="/iletisim"
