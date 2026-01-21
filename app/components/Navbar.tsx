@@ -33,7 +33,7 @@ export function Navbar() {
                     </svg>
                 </button>
                 <div className={`${isOpen ? 'block' : 'hidden'} w-full md:block md:w-auto`} id="navbar-default">
-                    <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-[var(--foreground)]/10 rounded-lg bg-[var(--background)] md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent">
+                    <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-[var(--foreground)]/10 rounded-lg bg-[var(--background)] md:flex-row md:items-center md:space-x-8 md:mt-0 md:border-0 md:bg-transparent">
                         {navLinks.map((link) => (
                             <li key={link.name}>
                                 <Link

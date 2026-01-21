@@ -190,24 +190,57 @@ export default function AntepFistigiPage() {
             {/* NASIL ÇALIŞIR - TIMELINE SECTION */}
             <section className="py-24 px-6 bg-white border-y border-gray-100">
                 <div className="max-w-4xl mx-auto">
-                    <h2 className="text-4xl font-bold text-center mb-20 text-[#2B1D16]">Yıllık Uygulama Takvimi</h2>
-                    <div className="space-y-12">
+                    <h2 className="text-4xl font-bold text-center mb-6 text-[#2B1D16]">Yıllık Uygulama Takvimi</h2>
+                    <p className="text-center text-gray-500 mb-20">Sadece zamanı değil, ağacın ruh halini ve biyolojik ihtiyacını takip ediyoruz:</p>
+                    <div className="space-y-16">
                         {[
-                            { season: "Kış", content: "Kış budaması, Bordo bulamacı ve kışlık örtü bitkisi ekimi.", color: "bg-blue-50 text-blue-700" },
-                            { season: "Bahar", content: "Uyanışla birlikte Psillid takibi ve azot/bor yönetimi.", color: "bg-green-50 text-green-700" },
-                            { season: "Yaz", content: "Kontrollü sulama, Karazenk kontrolü ve iç doldurma takibi.", color: "bg-amber-50 text-amber-700" },
-                            { season: "Sonbahar", content: "Aflatoksin riskine karşı zamanında ve doğru hasat yönetimi.", color: "bg-orange-50 text-orange-700" }
+                            {
+                                season: "❄️ Kış",
+                                period: "Dönem: Kış Uykusu (Dormansi)",
+                                state: "Bitkinin Durumu: Ağaç enerjisini köklere çeker, dinlenmeye geçer.",
+                                action: "Uygulama: Kış budaması ile ışık yönetimi, Bordo bulamacı ile hijyen ve toprağın zırhı olacak kışlık örtü bitkisi ekimi.",
+                                color: "bg-blue-50 text-blue-700"
+                            },
+                            {
+                                season: "🌸 Bahar",
+                                period: "Dönem: Uyanış ve Çiçeklenme",
+                                state: "Bitkinin Durumu: Gözler patlar, ağaç \"canlanır\" ve gelecek yılın gözlerini oluşturmaya başlar.",
+                                action: "Uygulama: Psillid takibi, tozlaşma desteği, Çinko (Zn) ve Bor (B) ile çiçek sağlığı yönetimi. Toprak altı yaşamı hareketlendirecek sıvı organik uygulamalar.",
+                                color: "bg-green-50 text-green-700"
+                            },
+                            {
+                                season: "☀️ Yaz",
+                                period: "Dönem: Meyve Gelişimi ve İç Doldurma",
+                                state: "Bitkinin Durumu: Fıstık iç doldurmaya başlar, su ve besin ihtiyacı zirve yapar (En stresli dönem).",
+                                action: "Uygulama: Kontrollü sulama, Karazenk kontrolü ve güneş yanığına karşı Kaolin Kili uygulaması. Bitkiyi serin tutacak yaprak uygulamaları.",
+                                color: "bg-amber-50 text-amber-700"
+                            },
+                            {
+                                season: "🍂 Sonbahar",
+                                period: "Dönem: Olgunlaşma ve Hasat",
+                                state: "Bitkinin Durumu: Meyveler olgunlaşır, ağaç bir sonraki yıl için rezerv biriktirmeye başlar.",
+                                action: "Uygulama: Aflatoksin riskini sıfırlayan \"toprağa değmeyen\" hasat yönetimi. Hasat sonrası ağacı yorgun bırakmamak için \"teşekkür\" gübrelemesi.",
+                                color: "bg-orange-50 text-orange-700"
+                            }
                         ].map((item, i) => (
                             <div key={i} className="flex gap-8 group">
                                 <div className="flex flex-col items-center">
-                                    <div className={`w-16 h-16 rounded-full flex items-center justify-center font-bold text-sm tracking-widest uppercase transition-all group-hover:scale-110 ${item.color}`}>
-                                        {item.season}
+                                    <div className={`w-16 h-16 rounded-full flex items-center justify-center font-bold text-sm tracking-widest uppercase shadow-md transition-all group-hover:scale-110 ${item.color}`}>
+                                        {item.season.split(' ')[1]}
                                     </div>
-                                    {i < 3 && <div className="w-[2px] h-full bg-gray-100 my-2"></div>}
+                                    {i < 3 && <div className="w-[2px] h-full bg-gray-100 my-4"></div>}
                                 </div>
-                                <div className="flex-1 pt-3">
-                                    <div className="p-6 bg-[#FDF6E3]/30 rounded-2xl border border-gray-100 group-hover:border-[#93C572]/30 transition-colors">
-                                        <p className="text-lg text-[#2B1D16]/80 leading-relaxed">{item.content}</p>
+                                <div className="flex-1">
+                                    <div className="p-8 bg-[#FDF6E3]/30 rounded-2xl border border-gray-100 group-hover:border-[#93C572]/30 transition-all group-hover:shadow-lg">
+                                        <div className="flex items-center gap-3 mb-4">
+                                            <span className="text-xl">{item.season.split(' ')[0]}</span>
+                                            <h3 className="text-2xl font-bold text-[#2B1D16]">{item.season.split(' ')[1]}</h3>
+                                            <span className="text-xs font-mono bg-white/50 px-2 py-1 rounded truncate opacity-60 ml-auto">{item.period}</span>
+                                        </div>
+                                        <div className="space-y-4">
+                                            <p className="text-sm font-semibold text-[#5F6F52] border-l-2 border-[#5F6F52] pl-3">{item.state}</p>
+                                            <p className="text-base text-[#2B1D16]/80 leading-relaxed">{item.action}</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -218,17 +251,41 @@ export default function AntepFistigiPage() {
 
             {/* SIK SORULAN SORULAR */}
             <section className="py-24 px-6 bg-[#FDF6E3]">
-                <div className="max-w-3xl mx-auto">
-                    <h2 className="text-4xl font-bold text-center mb-16 text-[#2B1D16]">Sıkça Sorulan Sorular</h2>
+                <div className="max-w-4xl mx-auto">
+                    <h2 className="text-4xl font-bold text-center mb-6 text-[#2B1D16]">Sıkça Sorulan Sorular</h2>
+                    <p className="text-center text-gray-500 mb-16">Onarıcı Tarım & Antep Fıstığı Özel</p>
                     <div className="space-y-6">
-                        <div className="bg-white p-8 rounded-2xl border border-white shadow-sm">
-                            <h4 className="text-lg font-bold mb-4 text-[#2B1D16]">Periyodisite (var yılı / yok yılı) tamamen biter mi?</h4>
-                            <p className="text-[#2B1D16]/70 leading-relaxed">Fıstık ağacının genetiğinde olan bu durumu tamamen sıfırlamak zordur. Ancak doğru bakım ve budama ile "yok yılı"ndaki verim kaybını ciddi oranda azaltmayı ve makası daraltmayı hedefleriz.</p>
-                        </div>
-                        <div className="bg-white p-8 rounded-2xl border border-white shadow-sm">
-                            <h4 className="text-lg font-bold mb-4 text-[#2B1D16]">Aflatoksin garantisi veriyor musunuz?</h4>
-                            <p className="text-[#2B1D16]/70 leading-relaxed">Aflatoksin doğada bulunan bir mantar türüdür ve sıfırlanamaz. Ancak geliştirdiğimiz yönetim protokolleri ile yasal limitlerin (AB standartları) altına indirmeyi yönetiriz.</p>
-                        </div>
+                        {[
+                            {
+                                q: "1. Onarıcı tarım Antep fıstığında verimi düşürür mü?",
+                                a: "Tam tersine. İlk geçiş yıllarında stabilizasyon beklense de, uzun vadede toprağın organik maddesi arttığı için \"yok yılı\" (periyodisite) etkisi azalır. Onarıcı tarım, ağacın sadece bu yıl değil, her yıl sürdürülebilir bir verim vermesini hedefler."
+                            },
+                            {
+                                q: "2. \"Hiç kimyasal kullanmayacak mıyız?\"",
+                                a: "Onarıcı tarım \"hiç\" değil, \"gerektiği kadar\" felsefesini savunur. Önce toprağın ve ağacın bağışıklığını güçlendiririz. Eğer biyolojik eşik aşılırsa, en az zararlı yöntemden başlayarak müdahale ederiz. Hedefimiz, zamanla kimyasala olan ihtiyacı minimuma indirmektir."
+                            },
+                            {
+                                q: "3. Örtü bitkisi (ot) ekmek fıstığın suyunu çalmaz mı?",
+                                a: "Geleneksel inanışın aksine, doğru örtü bitkisi karışımları toprağı bir sünger gibi yapar. Çıplak toprak güneşte pişip suyu buharlaştırırken, örtü bitkili toprak nemi hapseder ve kış yağışlarının yeraltına sızmasını sağlar. Yani otlar suyu çalmaz, toprağa saklar."
+                            },
+                            {
+                                q: "4. Aflatoksin sorununu onarıcı tarım nasıl çözer?",
+                                a: "Aflatoksin bir mantar (Aspergillus) sorunudur. Onarıcı tarımla toprakta faydalı mikroorganizma popülasyonunu artırarak zararlı mantarların baskın hale gelmesini engelleriz. Ayrıca doğru hasat ve kurutma disiplinimizle bu riski tarladan sofraya kadar yönetiriz."
+                            },
+                            {
+                                q: "5. Karazenk ile mücadelede onarıcı yöntemler yeterli mi?",
+                                a: "Evet. Karazenk ağacın zayıf düştüğü anı bekler. Bakır uygulamalarını, bitki bağışıklığını artıran deniz yosunu ve mikrobiyal gübrelerle destekleyerek yaprağın ağaçta kalma süresini uzatırız. Yaprak ne kadar geç dökülürse, ağaç o kadar güçlenir."
+                            },
+                            {
+                                q: "6. Periyodisite (Var/Yok yılı) gerçekten önlenebilir mi?",
+                                a: "Tamamen yok etmek genetik bir direnç gerektirse de, şiddetini %50-%70 oranında azaltmak mümkündür. Ağacın karbonhidrat dengesini ve toprak altı besin ağını doğru yönetirseniz, fıstık ağacınız \"yok\" yılında bile size gülümsemeye devam eder."
+                            }
+                        ].map((item, i) => (
+                            <div key={i} className="bg-white p-8 rounded-2xl border border-white shadow-sm hover:shadow-md transition-shadow">
+                                <h4 className="text-lg font-bold mb-4 text-[#2B1D16]">{item.q}</h4>
+                                <p className="text-[#2B1D16]/70 leading-relaxed">{item.a}</p>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>
