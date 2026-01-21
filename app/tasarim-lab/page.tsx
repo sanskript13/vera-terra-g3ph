@@ -274,6 +274,35 @@ export default function DesignLabPage() {
                                         </div>
                                     </div>
                                 </Link>
+
+                                {/* Design 6: Key Visuals */}
+                                <Link href="/tasarim-lab/key-visuals" className="block group md:col-span-2">
+                                    <div className="border border-white/5 bg-[#050505] p-8 min-h-[400px] flex flex-col md:flex-row-reverse gap-12 items-center transition-all hover:shadow-[0_0_50px_rgba(255,107,53,0.1)] relative overflow-hidden group-hover:scale-[1.01] duration-500 rounded-3xl">
+                                        <div className="absolute inset-0 bg-gradient-to-l from-transparent to-[#FF6B35]/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+
+                                        <div className="w-full md:w-1/2 relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border border-white/10">
+                                            <Image
+                                                src="/assets/kv_carbon.png"
+                                                alt="Key Visuals Preview"
+                                                fill
+                                                className="object-cover transition-transform duration-[2000ms] group-hover:scale-110"
+                                            />
+                                        </div>
+
+                                        <div className="w-full md:w-1/2 relative z-10 text-white">
+                                            <span className="text-xs font-mono font-bold text-[#FF6B35] bg-[#FF6B35]/10 px-3 py-1 rounded-full mb-6 inline-block uppercase tracking-widest">Experiment 006_KV</span>
+                                            <h3 className="text-4xl font-bold mb-4">Key Visuals: <span className="text-[#93C572]">Sensory Lab</span></h3>
+                                            <p className="text-white/60 mb-8 leading-relaxed">
+                                                Marka derinliğini sahadan gelen duyusal verilerle birleştiren yüksek segment görsel denemeler. Karbon tutulumu, bitki zekası ve makro düzen üzerine zarif animasyonlu konseptler.
+                                            </p>
+                                            <div className="flex items-center gap-4">
+                                                <span className="px-3 py-1 bg-white/5 text-white/40 text-[10px] font-bold tracking-widest uppercase rounded">Artistic</span>
+                                                <span className="px-3 py-1 bg-white/5 text-white/40 text-[10px] font-bold tracking-widest uppercase rounded">Cinematic</span>
+                                                <span className="text-2xl font-bold text-[#FF6B35] ml-auto">→</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </Link>
                             </div>
                         </div>
                     </section>
