@@ -9,7 +9,7 @@ export function Navbar() {
     const pathname = usePathname();
 
     const navLinks = [
-        { name: 'Çözümler', href: '/cozumler/kurumsal-tedarik-zinciri' },
+        { name: 'Çözümler', href: '/cozumler' },
         { name: 'Metodoloji', href: '/metodoloji' },
         { name: 'Blog', href: '/blog' },
         { name: 'Kaynaklar', href: '/kaynaklar' },
