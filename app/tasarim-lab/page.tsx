@@ -147,19 +147,73 @@ export default function DesignLabPage() {
                                     <div className="text-sm opacity-60 uppercase tracking-widest">Hektar İzleniyor</div>
                                 </div>
 
-                                <div className="h-1 w-full bg-[var(--foreground)]/10 overflow-hidden" style={{ borderRadius: 'var(--radius-sm)' }}>
-                                    <div className="h-full w-3/4 bg-[var(--color-neon-blue)]"></div>
-                                </div>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                    {/* Design 1 */}
+                                    <Link href="/tasarim-lab/organic-luxury" className="block group">
+                                        <div className="border border-stone-200 bg-[#F9F8F4] p-8 aspect-[4/3] flex flex-col justify-between transition-all hover:shadow-xl relative overflow-hidden">
+                                            <div className="absolute inset-0 bg-[url('/assets/coiumler/organic_luxury_hero_v2.png')] bg-cover bg-center opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                                            <div className="relative z-10">
+                                                <span className="text-xs font-serif italic text-stone-500">Experiment 001</span>
+                                                <h3 className="text-3xl font-serif text-stone-800 mt-2 group-hover:text-white transition-colors">Organic Luxury</h3>
+                                            </div>
+                                            <div className="relative z-10 flex justify-between items-end">
+                                                <span className="text-xs tracking-widest uppercase text-stone-400 group-hover:text-white/80">Silent / Editorial</span>
+                                                <span className="w-8 h-8 rounded-full border border-stone-300 flex items-center justify-center group-hover:bg-white group-hover:text-stone-900 transition-all">→</span>
+                                            </div>
+                                        </div>
+                                    </Link>
 
-                                <div className="grid grid-cols-2 gap-4 pt-4 border-t border-[var(--foreground)]/10">
-                                    <div>
-                                        <div className="text-xs opacity-40 mb-1">Primary Color</div>
-                                        <div className="h-8 w-full bg-[var(--color-neon-blue)]" style={{ borderRadius: 'var(--radius-sm)' }}></div>
-                                    </div>
-                                    <div>
-                                        <div className="text-xs opacity-40 mb-1">Accent (Pop)</div>
-                                        <div className="h-8 w-full bg-[var(--color-accent-pop)]" style={{ borderRadius: 'var(--radius-sm)' }}></div>
-                                    </div>
+                                    {/* Design 2 */}
+                                    <Link href="/tasarim-lab/precision-ag" className="block group">
+                                        <div className="border border-slate-200 bg-white p-8 aspect-[4/3] flex flex-col justify-between transition-all hover:shadow-xl hover:shadow-cyan-500/20 relative overflow-hidden">
+                                            <div className="absolute inset-0 bg-[url('/assets/coiumler/precision_ag_hero_v2.png')] bg-cover bg-center opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                                            <div className="relative z-10">
+                                                <span className="text-xs font-mono text-slate-500">Experiment 002</span>
+                                                <h3 className="text-3xl font-sans font-medium text-slate-900 mt-2 group-hover:text-white">Precision Ag</h3>
+                                            </div>
+                                            <div className="relative z-10 flex justify-between items-end">
+                                                <span className="text-xs tracking-widest uppercase text-slate-400 group-hover:text-white/80">Tech / SaaS</span>
+                                                <span className="w-8 h-8 rounded-md border border-slate-200 flex items-center justify-center group-hover:bg-[#10B981] group-hover:border-[#10B981] group-hover:text-white transition-all">
+                                                    <span className="font-mono text-[10px]">GO</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </Link>
+
+                                    {/* Design 3 */}
+                                    <Link href="/tasarim-lab/raw-earth" className="block group">
+                                        <div className="border-4 border-black bg-[#EFECE5] p-8 aspect-[4/3] flex flex-col justify-between transition-all hover:bg-black hover:text-[#CCFF00] relative overflow-hidden">
+                                            <div className="absolute inset-0 bg-[url('/assets/coiumler/raw_earth_hero.png')] bg-cover bg-center opacity-0 group-hover:opacity-40 transition-opacity duration-100 grayscale"></div>
+                                            <div className="relative z-10">
+                                                <span className="text-xs font-black uppercase tracking-tighter">Experiment 003</span>
+                                                <h3 className="text-4xl font-black uppercase mt-2 leading-[0.8]">Raw<br />Earth</h3>
+                                            </div>
+                                            <div className="relative z-10 flex justify-between items-end">
+                                                <span className="text-xs font-bold uppercase tracking-widest">Brutalist / Wild</span>
+                                                <span className="text-2xl font-black">↗</span>
+                                            </div>
+                                        </div>
+                                    </Link>
+
+                                    {/* Design 4 */}
+                                    <Link href="/tasarim-lab/futuristic" className="block group">
+                                        <div className="border border-[#06B6D4]/30 bg-[#030712] p-8 aspect-[4/3] flex flex-col justify-between transition-all hover:border-[#00FF9D] relative overflow-hidden">
+                                            <div className="absolute inset-0 bg-[url('/assets/coiumler/futuristic_hero.png')] bg-cover bg-center opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                                            {/* Scanline overlay */}
+                                            <div className="absolute inset-0 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] bg-[length:100%_2px,3px_100%] opacity-20 pointer-events-none"></div>
+
+                                            <div className="relative z-10">
+                                                <span className="text-xs font-mono text-[#06B6D4]">EXP_004</span>
+                                                <h3 className="text-3xl font-mono text-[#E0F2FE] mt-2 group-hover:text-[#00FF9D] text-shadow-neon">Futuristic</h3>
+                                            </div>
+                                            <div className="relative z-10 flex justify-between items-end">
+                                                <span className="text-xs tracking-widest uppercase text-[#06B6D4]/70">Cyber / Space</span>
+                                                <span className="w-8 h-8 border border-[#06B6D4] flex items-center justify-center group-hover:bg-[#06B6D4] group-hover:text-black transition-all">
+                                                    +
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </Link>
                                 </div>
                             </div>
 
@@ -176,3 +230,4 @@ export default function DesignLabPage() {
         </div>
     );
 }
+```
