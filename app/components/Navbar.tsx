@@ -10,7 +10,7 @@ export function Navbar() {
 
     const navLinks = [
         { name: 'Çözümler', href: '/cozumler' },
-        { name: 'Metodoloji', href: '/metodoloji' },
+        { name: 'Metodoloji', href: '/nasil-calisir' },
         { name: 'Blog', href: '/blog' },
         { name: 'Kaynaklar', href: '/kaynaklar' },
         { name: 'Hakkımızda', href: '/hakkimizda' },
