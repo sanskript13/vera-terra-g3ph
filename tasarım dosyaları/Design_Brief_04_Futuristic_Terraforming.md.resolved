@@ -1,0 +1,34 @@
+# Tasarım Dosyası 04: Futuristic Terraforming (Agresif & Siber)
+
+## 🎯 Vizyon ve His
+Bu tema, tarımı "Mars'ı dünyalaştırma" (Terraforming) teknolojisi gibi ele alır. Gelecekten gelmiş gibidir. Uzay teknolojisi, uydu verileri ve yapay zeka estetiği hakimdir. **Dark Mode** varsayılandır.
+
+*   **Anahtar Kelimeler:** Sibernetik, Uzay Çağı, Neon, Geometrik, Karanlık.
+*   **İlham:** SpaceX UI, Sci-Fi Arayüzleri (FUI), Matrix.
+
+## 🎨 Renk Paleti (Dark Sci-Fi)
+Uzay boşluğu ve veriler.
+*   **Zemin:** `Deep Space` (#030712) veya `Dark Void` (#000000)
+*   **Metinler:** `Hologram White` (#E0F2FE)
+*   **Vurgu:** `Cyber Cyan` (#06B6D4) ve `Laser Green` (#00FF9D).
+*   **Gradient:** Koyu maviden mora giden neon gradientler.
+
+## ✒️ Tipografi
+Teknolojik ve monospaced hibrit.
+*   **Başlıklar:** *Orbitron*, *Michroma* veya *Uncut Sans*. Geniş ve fütüristik.
+*   **Gövde:** *Space Mono* veya *Rajdhani*. Köşeli, teknik okuma hissi.
+
+## 📐 Layout ve Kompozisyon
+*   **HUD (Heads-Up Display):** Arayüz elemanları bir kokpit ekranı gibi yerleştirilmiş. Köşelerde sabit koordinat sayıları, dönen pusulalar.
+*   **Grid:** Işıklı, ince neon çizgilerle oluşturulmuş ızgara. Backgroud'da hareketli "grid" animasyonu.
+*   **Görseller:** Uydu haritaları ("Heatmap" görünümünde), tel kafes (wireframe) 3D arazi modelleri.
+
+## ✨ Mikro-Etkileşimler
+*   **Glitch:** Arada sırada metinlerde veya görsellerde saniyelik bozulmalar (glitch effect).
+*   **Yazı Efekti:** Metinler daktilo (typewriter) efektiyle veya "decoding" (şifre çözme) animasyonuyla gelir.
+*   **Scan Lines:** Ekranda çok hafif eski monitör tarama çizgileri overlay'i.
+
+## 🤖 LLM Prompt (Kopyala/Yapıştır)
+```text
+You are a Sci-Fi UI designer creating a "Futuristic Terraforming" theme for Vera Terra. The site must be in Dark Mode (#030712). The aesthetic is 'Space Age Agriculture'. Use glowing neon lines (Cyan #06B6D4, Green #00FF9D) and holographic gradients. Fonts should be futuristic (Orbitron) or technical monospaced (Space Mono). The layout should resemble a HUD (Heads-Up Display) with coordinate numbers, grid lines, and satellite data overlays. Use glitch effects and decoding animations for text. The vibe is that Vera Terra is using alien-level technology to save the planet. High energy, synthetic, and precise.
+```

@@ -1,0 +1,14 @@
+# Interface Analysis: Vera Terra
+
+- [ ] Data Collection & Exploration <!-- id: 0 -->
+    - [ ] Explore external live site (https://vera-terra-g3ph.vercel.app/) <!-- id: 1 -->
+    - [ ] Identify local codebase structure <!-- id: 2 -->
+- [ ] Technical Analysis <!-- id: 3 -->
+    - [ ] Review performance and responsiveness <!-- id: 4 -->
+    - [ ] Inspect code quality (component structure, routing) <!-- id: 5 -->
+    - [ ] Analyze SEO and accessibility implementations <!-- id: 6 -->
+- [ ] Academic & Design Analysis <!-- id: 7 -->
+    - [ ] Evaluate visual hierarchy and typography <!-- id: 8 -->
+    - [ ] Aesthethic and Usability (UX) review <!-- id: 9 -->
+    - [ ] Content authority and presentation <!-- id: 10 -->
+- [ ] Final Report Generation <!-- id: 11 -->

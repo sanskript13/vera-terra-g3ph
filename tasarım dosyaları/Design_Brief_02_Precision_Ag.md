@@ -1,0 +1,43 @@
+# Tasarım Dosyası 02: Precision Ag (Teknik & Net)
+
+## 🎯 Vizyon ve His
+
+Bu tema, mevcut yapının daha "SaaS" (Software as a Service) ve veri odaklı versiyonudur. Doğayı anlamak için **veriyi ve bilimi** kullandığımızı vurgular. Duygusallıktan ziyade **netlik, şeffaflık ve etkinlik** ön plandadır. "Laboratuvar" temizliği.
+
+* **Anahtar Kelimeler:** Analitik, Hijyenik, Veri Odaklı, Modern, Güvenilir.
+* **İlham:** Stripe, Linear, Carbon Design System.
+
+## 🎨 Renk Paleti (Cool Tech)
+
+Sakinleştirici ama otoriter maviler ve yeşiller.
+
+* **Zemin:** `Pure White` (#FFFFFF) veya çok açık `Ice Blue` (#F0F4F8)
+* **Metinler:** `Slate Blue` (#1E293B)
+* **Vurgu:** `Tech Green` (#10B981) - Canlı ve "Onay" hissi veren bir yeşil.
+* **İkincil:** `Sky Blue` (#3B82F6) - Teknoloji vurgusu için.
+
+## ✒️ Tipografi
+
+Tamamen Sans-Serif. Mühendislik estetiği.
+
+* **Başlıklar & Gövde:** *Inter* veya *IBM Plex Sans*.
+* **Özellik:** Başlıklarda "Tracking" (harf aralığı) biraz kısık (-0.02em), çok modern ve blok duruş.
+* **Veri/Kod:** *JetBrains Mono* veya *Fira Code*. Sayısal veriler ve etiketler için monospaced font kullanımı.
+
+## 📐 Layout ve Kompozisyon
+
+* **Modular Grid:** Kart yapısı (Bento Grid) hakim. Her bilgi bir "hücre" içinde.
+* **Sınırlar:** İnce, zarif çizgiler (border: 1px solid #E2E8F0).
+* **Görseller:** İzometrik illüstrasyonlar veya "Data Overlay" yapılmış fotoğraflar. Tarla fotoğrafının üzerinde crop çizgileri veya veri noktaları var.
+
+## ✨ Mikro-Etkileşimler
+
+* **Hover:** Kartların üzerine gelince hafif bir yukarı kalkma (translate-y) ve gölge (shadow-lg) artışı.
+* **Data Viz:** Sayfaya girince hareketlenen grafikler, artan sayılar.
+* **Cam Etkisi:** Menülerde ve kart başlıklarında hafif "Glassmorphism" (buzlu cam).
+
+## 🤖 LLM Prompt (Kopyala/Yapıştır)
+
+```text
+You are an expert UI Engineer designing a "Precision Agriculture" interface for Vera Terra. The aesthetic is clean, scientific, and SaaS-like. Use a pure white background with stark, thin borders (#E2E8F0) creating a bento-grid layout. Typography must be 100% Sans-Serif (Inter or IBM Plex Sans), prioritizing readability and structure. Use 'JetBrains Mono' for data points. The primary accent color is a crisp technical green (#10B981) combined with slate blues. The feeling should be of a high-tech laboratory: efficient, transparent, and data-rich. No decorative elements that don't serve a function.
+```

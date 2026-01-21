@@ -1,0 +1,41 @@
+# Tasarım Dosyası 01: Organic Luxury (Yumuşak & Rafine)
+
+## 🎯 Vizyon ve His
+
+Bu tema, mevcut akademik duruşu "butik danışmanlık" seviyesine taşır. Teknoloji arka planda çalışırken, ön planda **doğanın zarafeti** ve **üst düzey hizmet** algısı vardır. Toprak kirli değil, değerlidir.
+
+* **Anahtar Kelimeler:** Rafine, Dingin, Prestijli, Organik, Sessiz Lüks.
+* **İlham:** Aesop, Kinfolk, Üst segment mimarlık ofisleri.
+
+## 🎨 Renk Paleti (Soft Earth Tones)
+
+Keskin beyazlar yerine kırık beyazlar ve sıcak griler kullanılır.
+
+* **Zemin:** `Cream / Alabaster` (#F9F8F4)
+* **Metinler:** `Deep Charcoal` (#2C2C2C) - Siyah değil.
+* **Vurgu:** `Muted Olive` (#6B705C) ve `Terracotta` (#A5A58D)
+* **İkincil:** `Sandstone` (#DDBEA9)
+
+## ✒️ Tipografi
+
+Şerifli ve Şerifsiz fontların zarif dansı.
+
+* **Başlıklar (H1, H2):** *Instrument Serif* veya *Playfair Display*. İtalik vurgularla karakter kazandırılmış. "Toprağın *Bilgeliği*" gibi.
+* **Gövde (Body):** *Satoshi* veya *Geist Sans*. Çok temiz, yüksek okunabilirlik, geniş satır aralıkları (line-height: 1.6).
+
+## 📐 Layout ve Kompozisyon
+
+* **White Space (Boşluk):** Çok cömert boşluklar. İçerik sıkışık değil, nefes alıyor.
+* **Grid:** Asimetrik ama dengeli ızgara sistemi. Görseller metinlerin bazen üzerine biniyor (overlay), bazen tamamen ayrı duruyor.
+* **Görseller:** Yüksek kaliteli, sinematik, "warm filter" uygulanmış tarım fotoğrafları. Asla stok fotoğraf gibi durmamalı, "belgesel karesi" gibi olmalı.
+
+## ✨ Mikro-Etkileşimler
+
+* **Scroll:** "Parallax" kullanımı var ama çok yavaş ve yumuşak.
+* **Butonlar:** Köşeli değil, hafif radiuslu (4px) veya tam oval (hap). Hover olunca renk değişimi yerine "büyüme" (scale) veya "alt çizgi uzaması".
+
+## 🤖 LLM Prompt (Kopyala/Yapıştır)
+
+```text
+You are an expert UI/UX designer specializing in "Organic Luxury". Redesign the Vera Terra interface to feel like a high-end boutique consultancy. Use a background of #F9F8F4. Structure the layout with generous whitespace. Use 'Instrument Serif' for headings to give an editorial, sophisticated look. The color palette should be muted olive greens and warm sand tones. Buttons should be subtle and elegant. The overall goal is to make the user feel calm and trusting of a prestigious brand. Avoid sharp contrasts or neon colors.
+```
