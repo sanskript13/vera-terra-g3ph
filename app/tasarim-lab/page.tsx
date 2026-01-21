@@ -303,6 +303,35 @@ export default function DesignLabPage() {
                                         </div>
                                     </div>
                                 </Link>
+
+                                {/* Design 7: Coming Soon v2 */}
+                                <Link href="/coming-soon/v2" className="block group md:col-span-2">
+                                    <div className="border border-white/5 bg-[#050505] p-8 min-h-[400px] flex flex-col md:flex-row gap-12 items-center transition-all hover:shadow-[0_0_50px_rgba(6,182,212,0.1)] relative overflow-hidden group-hover:scale-[1.01] duration-500 rounded-3xl">
+                                        <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#06B6D4]/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+
+                                        <div className="w-full md:w-1/2 relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border border-white/10">
+                                            <Image
+                                                src="/assets/coming_soon_bloom.png"
+                                                alt="Coming Soon v2 Preview"
+                                                fill
+                                                className="object-cover transition-transform duration-[2000ms] group-hover:scale-110"
+                                            />
+                                        </div>
+
+                                        <div className="w-full md:w-1/2 relative z-10 text-white">
+                                            <span className="text-xs font-mono font-bold text-[#06B6D4] bg-[#06B6D4]/10 px-3 py-1 rounded-full mb-6 inline-block uppercase tracking-widest">Experiment 007_CS</span>
+                                            <h3 className="text-4xl font-bold mb-4">Coming Soon: <span className="text-white">Motion v2</span></h3>
+                                            <p className="text-white/60 mb-8 leading-relaxed">
+                                                Sıvı (Gooey) filtreler ve lazer tarama efektleri içeren ultra-zarif animasyonlu Coming Soon konsepti. Bloom ve Scan olmak üzere iki farklı duyusal yaklaşım barındırır.
+                                            </p>
+                                            <div className="flex items-center gap-4">
+                                                <span className="px-3 py-1 bg-white/5 text-white/40 text-[10px] font-bold tracking-widest uppercase rounded">Liquid Motion</span>
+                                                <span className="px-3 py-1 bg-white/5 text-white/40 text-[10px] font-bold tracking-widest uppercase rounded">Cyber-Agi</span>
+                                                <span className="text-2xl font-bold text-[#06B6D4] ml-auto">→</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </Link>
                             </div>
                         </div>
                     </section>
