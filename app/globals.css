@@ -174,3 +174,29 @@ body {
   --border-width: 1px;
   --font-heading-weight: 400;
 }
+
+/* GROUP 3: PISTACHIO REALITY (Antep) */
+.theme-sys3-pistachio-light {
+  --background: #fdf6e3;
+  /* Warm beige (shell interior) */
+  --foreground: #2b1d16;
+  /* Dark shell brown */
+  --color-neon-blue: #93c572;
+  /* Pistachio Green (Kernel) */
+  --color-neon-orange: #d95d5d;
+  /* Reddish Shell External */
+  --radius-md: 0.5rem;
+  --font-heading-weight: 700;
+}
+
+.theme-sys3-pistachio-dark {
+  --background: #1a120b;
+  /* Deep brown/black */
+  --foreground: #fef0cd;
+  /* Pale yellowish white */
+  --color-neon-blue: #a4d17a;
+  /* Bright Pistachio Green */
+  --color-neon-orange: #ff7e79;
+  /* Soft Red Shell */
+  --radius-md: 0.5rem;
+}

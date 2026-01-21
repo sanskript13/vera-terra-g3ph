@@ -29,6 +29,13 @@ export default function DesignLabPage() {
                 { id: 'theme-sys2-editorial', name: 'Editorial Minimal', color: '#f4f1ea' },
                 { id: 'theme-sys2-industrial', name: 'Industrial Calm', color: '#e5e7eb' },
             ]
+        },
+        {
+            title: "3. Pistachio Reality (Antep)",
+            themes: [
+                { id: 'theme-sys3-pistachio-light', name: 'Pistachio Light', color: '#93c572' },
+                { id: 'theme-sys3-pistachio-dark', name: 'Pistachio Dark', color: '#2b1d16' },
+            ]
         }
     ];
 
