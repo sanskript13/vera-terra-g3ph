@@ -73,9 +73,9 @@ export default function DesignLabPage() {
                         <p>Aktif Class:</p>
                         <code className="text-green-400 bg-white/5 px-2 py-1 rounded block mt-1">{activeTheme || 'default'}</code>
                     </div>
-                    <a href="/" className="px-4 py-2 bg-white/5 hover:bg-white/10 text-white text-xs rounded block text-center transition-colors">
+                    <Link href="/" className="px-4 py-2 bg-white/5 hover:bg-white/10 text-white text-xs rounded block text-center transition-colors">
                         Ana Siteye Dön
-                    </a>
+                    </Link>
                 </div>
             </aside>
 
@@ -328,6 +328,26 @@ export default function DesignLabPage() {
                                                 <span className="px-3 py-1 bg-white/5 text-white/40 text-[10px] font-bold tracking-widest uppercase rounded">Liquid Motion</span>
                                                 <span className="px-3 py-1 bg-white/5 text-white/40 text-[10px] font-bold tracking-widest uppercase rounded">Cyber-Agi</span>
                                                 <span className="text-2xl font-bold text-[#06B6D4] ml-auto">→</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </Link>
+
+                                {/* Design 8: Archived Homepage v1 */}
+                                <Link href="/tasarim-lab/v1-home" className="block group md:col-span-2">
+                                    <div className="border border-white/5 bg-[#1a1a1a] p-8 min-h-[300px] flex flex-col md:flex-row-reverse gap-12 items-center transition-all hover:shadow-[0_0_50px_rgba(255,255,255,0.1)] relative overflow-hidden group-hover:scale-[1.01] duration-500 rounded-3xl">
+                                        <div className="absolute inset-0 bg-gradient-to-l from-transparent to-white/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+
+                                        <div className="w-full relative z-10 text-white">
+                                            <span className="text-xs font-mono font-bold text-gray-400 bg-white/10 px-3 py-1 rounded-full mb-6 inline-block uppercase tracking-widest">Archive 001</span>
+                                            <h3 className="text-4xl font-bold mb-4">Homepage: <span className="text-gray-300">v1 (Archived)</span></h3>
+                                            <p className="text-white/60 mb-8 leading-relaxed max-w-2xl">
+                                                Orijinal ana sayfa tasarımı. "Sahada Uygulanabilir Dönüşüm" konsepti ve split-screen yapısı ile ilk versiyon. Referans amaçlı saklanmıştır.
+                                            </p>
+                                            <div className="flex items-center gap-4">
+                                                <span className="px-3 py-1 bg-white/5 text-white/40 text-[10px] font-bold tracking-widest uppercase rounded">Legacy</span>
+                                                <span className="px-3 py-1 bg-white/5 text-white/40 text-[10px] font-bold tracking-widest uppercase rounded">Original</span>
+                                                <span className="text-2xl font-bold text-white ml-auto">→</span>
                                             </div>
                                         </div>
                                     </div>

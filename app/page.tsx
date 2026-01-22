@@ -9,151 +9,206 @@ export default function Home() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Placeholder */}
+      <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
+        {/* Abstract Background */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-[var(--background)] z-0">
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1625246333195-58197ebd0031?q=80&w=2500&auto=format&fit=crop')] bg-cover bg-center mix-blend-overlay opacity-50"></div>
+          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1625246333195-58197ebd0031?q=80&w=2500&auto=format&fit=crop')] bg-cover bg-center mix-blend-overlay opacity-30"></div>
         </div>
 
         <DataGrid className="z-10" />
 
-        <div className="relative z-20 container mx-auto px-4 text-center max-w-4xl pt-20">
+        <div className="relative z-20 container mx-auto px-4 text-center max-w-5xl pt-20">
           <span className="inline-block py-1 px-3 rounded-full border border-[var(--color-neon-blue)]/30 bg-[var(--color-neon-blue)]/10 text-[var(--color-neon-blue)] text-sm font-mono mb-6 backdrop-blur-sm">
-            Onarıcı Tarım & Teknoloji Destekli Program Tasarımı
+            Vera Terra Gateway — v1
           </span>
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-8 text-white drop-shadow-lg">
-            Sahada Uygulanabilir Dönüşüm. <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">Masada Denetlenebilir Kanıt.</span>
+            Geleceğin Tarımı İçin <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-neon-blue)] to-[var(--color-neon-orange)]">Dijital Geçit</span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-200 mb-10 max-w-2xl mx-auto leading-relaxed">
-            Üretici kooperatifleri ve kurumsal tedarik zincirleri için onarıcı tarım programları tasarlarız. Sahada koçlukla uygulatır, ilerlemeyi ölçüm ve veri iziyle görünür kılarız.
+          <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed">
+            Onarıcı tarım ekosistemine giriş yapın. Üreticiler, kurumlar ve araştırmacılar için tasarlanmış kaynaklar, araçlar ve programlar.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
-              href="/iletisim"
-              className="px-8 py-4 bg-[var(--color-accent-pop)] text-white font-bold rounded hover:opacity-90 transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(255,107,53,0.3)]"
+              href="#programs"
+              className="px-8 py-4 bg-white text-black font-bold rounded hover:bg-gray-200 transition-all transform hover:scale-105"
             >
-              Kapsamı Netleştirelim
+              Programları Keşfet
             </Link>
             <Link
-              href="#metodoloji"
+              href="/tasarim-lab"
               className="px-8 py-4 border border-white/20 bg-white/5 backdrop-blur-sm text-white rounded hover:bg-white/10 transition-all font-medium"
             >
-              Nasıl Çalışır?
+              Tasarım Laboratuvarı
             </Link>
           </div>
         </div>
       </section>
 
-      {/* The Gap Section */}
-      <section className="py-24 bg-[var(--foreground)]/5 relative border-y border-[var(--foreground)]/10">
+      {/* Sektörel Programlar */}
+      <section id="programs" className="py-24 bg-[var(--foreground)]/5 relative border-y border-[var(--foreground)]/10">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-[var(--foreground)]">Teori ile Pratik Arasındaki Uçurum</h2>
-            <p className="text-lg opacity-80 mb-8 leading-relaxed">
-              Onarıcı tarım dünyada hızla yükselirken, sahadaki üretici artan maliyetlerle, kurumsal alıcı ise karmaşık regülasyon baskısıyla (SBTi, Scope 3) boğuşuyor.
-              <br /><br />
-              Sadece "yapmak" yetmiyor; yaptığını uluslararası standartlarda <strong className="text-[var(--color-neon-blue)]">kanıtlamak</strong> gerekiyor.
-              Vera Terra, işte bu "saha gerçeği" ile "kurumsal denetim" arasındaki köprüyü kurar.
-            </p>
+          <div className="flex justify-between items-end mb-12">
+            <div>
+              <h2 className="text-3xl font-bold text-[var(--foreground)]">Sektörel Programlar</h2>
+              <p className="opacity-60 mt-2">Endüstri odaklı özel çözümler.</p>
+            </div>
+            <Link href="/cozumler" className="text-[var(--color-neon-blue)] hover:underline hidden md:block">Tümünü Gör →</Link>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Antep Fıstığı */}
+            <Link href="/cozumler/antep-fistigi" className="group block h-full">
+              <div className="bg-[var(--background)] border border-[var(--foreground)]/10 rounded-xl overflow-hidden hover:border-[var(--color-neon-blue)] hover:shadow-lg transition-all h-full flex flex-col">
+                <div className="h-48 bg-[url('https://images.unsplash.com/photo-1625246333195-58197ebd0031?q=80&w=800')] bg-cover bg-center group-hover:scale-105 transition-transform duration-500"></div>
+                <div className="p-8 flex-1 flex flex-col">
+                  <span className="text-xs font-mono text-[var(--color-neon-orange)] mb-2">Pistachio</span>
+                  <h3 className="text-xl font-bold mb-4">Antep Fıstığı Programı</h3>
+                  <p className="text-sm opacity-60 mb-6 flex-1">
+                    Kuraklık stresi yönetimi, aflatoksin önleme ve karbon tutulumu odaklı rejeneratif dönüşüm.
+                  </p>
+                  <span className="text-[var(--color-foreground)] font-medium group-hover:translate-x-2 transition-transform inline-block">İncele →</span>
+                </div>
+              </div>
+            </Link>
+
+            {/* Pamuk (Placeholder) */}
+            <div className="group block h-full opacity-60 hover:opacity-100 transition-opacity">
+              <div className="bg-[var(--background)] border border-[var(--foreground)]/10 rounded-xl overflow-hidden h-full flex flex-col">
+                <div className="h-48 bg-gray-800 flex items-center justify-center">
+                  <span className="text-2xl">☁️</span>
+                </div>
+                <div className="p-8 flex-1 flex flex-col">
+                  <span className="text-xs font-mono text-gray-500 mb-2">Cotton</span>
+                  <h3 className="text-xl font-bold mb-4">Pamuk Programı</h3>
+                  <p className="text-sm opacity-60 mb-6 flex-1">
+                    Su verimliliği ve pestisit azaltımı odaklı sürdürülebilir pamuk üretimi.
+                  </p>
+                  <span className="text-xs border border-gray-600 rounded px-2 py-1 w-fit">Yakında</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Hububat (Placeholder) */}
+            <div className="group block h-full opacity-60 hover:opacity-100 transition-opacity">
+              <div className="bg-[var(--background)] border border-[var(--foreground)]/10 rounded-xl overflow-hidden h-full flex flex-col">
+                <div className="h-48 bg-gray-800 flex items-center justify-center">
+                  <span className="text-2xl">🌾</span>
+                </div>
+                <div className="p-8 flex-1 flex flex-col">
+                  <span className="text-xs font-mono text-gray-500 mb-2">Cereals</span>
+                  <h3 className="text-xl font-bold mb-4">Hububat Programı</h3>
+                  <p className="text-sm opacity-60 mb-6 flex-1">
+                    Toprak sağlığını iyileştiren nöbetleşe ekim ve örtü bitkisi stratejileri.
+                  </p>
+                  <span className="text-xs border border-gray-600 rounded px-2 py-1 w-fit">Yakında</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Segmentation - Split Screen */}
-      <section className="grid md:grid-cols-2 min-h-[600px]">
-        {/* Producer Side */}
-        <div className="relative group overflow-hidden">
-          <div className="absolute inset-0 bg-[var(--color-soil-secondary)]/90 mix-blend-multiply z-10 transition-opacity duration-500 group-hover:opacity-80"></div>
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1592982537447-6f2a6a0c7c18?q=80&w=1000')] bg-cover bg-center"></div>
-          <div className="relative z-20 h-full flex flex-col justify-center p-12 text-white">
-            <h3 className="text-3xl font-bold mb-4">Üretici ve Kooperatifler</h3>
-            <h4 className="text-xl font-light text-orange-200 mb-6">Sahada Pratik Dönüşüm</h4>
-            <p className="mb-8 text-gray-200 max-w-md">
-              Karmaşık teoriler değil; bölgenize uygun, sahada uygulanabilir pratik setleri. Adım adım toprak sağlığı ve verim optimizasyonu.
-            </p>
-            <Link href="/cozumler/uretici-kooperatif" className="inline-flex items-center text-[var(--color-sunset-glow)] hover:text-white font-semibold transition-colors">
-              Üretici Çözümleri <span className="ml-2">→</span>
-            </Link>
-          </div>
-        </div>
-
-        {/* Corporate Side */}
-        <div className="relative group overflow-hidden">
-          <div className="absolute inset-0 bg-slate-900/90 mix-blend-multiply z-10 transition-opacity duration-500 group-hover:opacity-80"></div>
-          <DataGrid className="opacity-20 z-15" />
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1000')] bg-cover bg-center"></div>
-          <div className="relative z-20 h-full flex flex-col justify-center p-12 text-white">
-            <h3 className="text-3xl font-bold mb-4">Kurumsal Tedarik Zincirleri</h3>
-            <h4 className="text-xl font-light text-cyan-200 mb-6">İzlenebilir ve Denetlenebilir Tedarik</h4>
-            <p className="mb-8 text-gray-300 max-w-md">
-              İklim risklerini yönetmek ve sürdürülebilirlik hedeflerine ulaşmak için uçtan uca program tasarımı. Denetime hazır (audit-ready) raporlama.
-            </p>
-            <Link href="/cozumler/kurumsal-tedarik-zinciri" className="inline-flex items-center text-[var(--color-neon-blue)] hover:text-white font-semibold transition-colors">
-              Kurumsal Çözümler <span className="ml-2">→</span>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Methodology Section */}
-      <section id="metodoloji" className="py-24 bg-[var(--background)]">
+      {/* Çözümler Grid */}
+      <section className="py-24 bg-[var(--background)]">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-16 text-center text-[var(--foreground)]">Nasıl Çalışır?</h2>
-          <div className="grid md:grid-cols-3 gap-12 relative">
-            {/* Connector Line */}
-            <div className="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-[var(--foreground)]/20 to-transparent"></div>
+          <h2 className="text-3xl font-bold text-[var(--foreground)] mb-12 text-center">Çözümler</h2>
 
-            {/* Step 1 */}
-            <div className="relative z-10 flex flex-col items-center text-center">
-              <div className="w-24 h-24 rounded-full bg-[var(--background)] border border-[var(--foreground)]/20 flex items-center justify-center text-3xl mb-6 shadow-lg text-[var(--foreground)]">
-                📏
+          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            <Link href="/cozumler/uretici-kooperatif" className="group relative overflow-hidden rounded-2xl min-h-[300px] flex items-end p-8 border border-[var(--foreground)]/10 hover:border-[var(--color-sunset-glow)] transition-colors">
+              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1595837659550-99410940ccdc?q=80&w=1200')] bg-cover bg-center transition-transform duration-700 group-hover:scale-105"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+              <div className="relative z-10 text-white">
+                <span className="text-[var(--color-sunset-glow)] font-mono text-xs uppercase tracking-wider mb-2 block">Saha Odaklı</span>
+                <h3 className="text-3xl font-bold mb-2">Üretici ve Kooperatifler</h3>
+                <p className="opacity-80 max-w-md text-sm">Verim, dayanıklılık ve pazar erişimi için pratik çözümler.</p>
               </div>
-              <h3 className="text-xl font-bold text-[var(--foreground)] mb-4">1. Baseline (Başlangıç)</h3>
-              <p className="opacity-60 text-sm leading-relaxed max-w-xs">
-                Nereden başladığımızı bilmeden ilerlemeyi yönetemeyiz. Toprak sağlığı ve karbon ayak izi analizi.
-              </p>
-            </div>
+            </Link>
 
-            {/* Step 2 */}
-            <div className="relative z-10 flex flex-col items-center text-center">
-              <div className="w-24 h-24 rounded-full bg-[var(--background)] border border-[var(--foreground)]/20 flex items-center justify-center text-3xl mb-6 shadow-lg text-[var(--foreground)]">
-                🌱
+            <Link href="/cozumler/kurumsal-tedarik-zinciri" className="group relative overflow-hidden rounded-2xl min-h-[300px] flex items-end p-8 border border-[var(--foreground)]/10 hover:border-[var(--color-neon-blue)] transition-colors">
+              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200')] bg-cover bg-center transition-transform duration-700 group-hover:scale-105"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+              <div className="relative z-10 text-white">
+                <span className="text-[var(--color-neon-blue)] font-mono text-xs uppercase tracking-wider mb-2 block">Veri Odaklı</span>
+                <h3 className="text-3xl font-bold mb-2">Kurumsal Tedarik Zincirleri</h3>
+                <p className="opacity-80 max-w-md text-sm">Scope 3 hedefleri ve sürdürülebilirlik raporlaması için altyapı.</p>
               </div>
-              <h3 className="text-xl font-bold text-[var(--foreground)] mb-4">2. Saha Uygulaması</h3>
-              <p className="opacity-60 text-sm leading-relaxed max-w-xs">
-                Reçete verip gitmeyiz. Ziraat mühendislerimizle sahada birebir koçluk ve uygulama takibi.
-              </p>
-            </div>
-
-            {/* Step 3 */}
-            <div className="relative z-10 flex flex-col items-center text-center">
-              <div className="w-24 h-24 rounded-full bg-[var(--background)] border border-[var(--foreground)]/20 flex items-center justify-center text-3xl mb-6 shadow-lg text-[var(--foreground)]">
-                📊
-              </div>
-              <h3 className="text-xl font-bold text-[var(--foreground)] mb-4">3. İzleme ve Doğrulama</h3>
-              <p className="opacity-60 text-sm leading-relaxed max-w-xs">
-                Sadece söz değil, kanıt. Uydu verisi ve saha kayıtlarıyla denetime hazır MRV dosyası.
-              </p>
-            </div>
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* Why Vera Terra */}
+      {/* Yaklaşım ve Uzmanlık */}
       <section className="py-24 bg-[var(--foreground)]/5 border-t border-[var(--foreground)]/10">
-        <div className="container mx-auto px-4 grid md:grid-cols-3 gap-8">
-          <div className="p-8 border border-[var(--foreground)]/10 rounded-lg hover:border-[var(--color-neon-blue)]/50 transition-colors bg-[var(--background)]">
-            <h4 className="text-xl font-bold text-[var(--foreground)] mb-4">Saha Gerçekliği</h4>
-            <p className="opacity-60 text-sm">Programlarımızı masa başında değil, çizme giyerek tasarlarız. Teori değil, pratik.</p>
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold text-[var(--foreground)] mb-12">Yaklaşım ve Uzmanlık</h2>
+          <div className="flex flex-wrap justify-center gap-6">
+            <Link href="/nasil-calisir" className="bg-[var(--background)] px-8 py-6 rounded-xl border border-[var(--foreground)]/10 hover:border-[var(--foreground)]/30 transition-all min-w-[200px] shadow-sm hover:shadow-md">
+              <span className="text-4xl block mb-4">⚙️</span>
+              <h3 className="font-bold mb-2">Nasıl Çalışır?</h3>
+              <p className="text-xs opacity-60">5 Adımlı Metodoloji</p>
+            </Link>
+            <div className="bg-[var(--background)] px-8 py-6 rounded-xl border border-[var(--foreground)]/10 hover:border-[var(--foreground)]/30 transition-all min-w-[200px] opacity-70 cursor-not-allowed">
+              <span className="text-4xl block mb-4">📏</span>
+              <h3 className="font-bold mb-2">MRV Altyapısı</h3>
+              <p className="text-xs opacity-60">Ölçüm ve Doğrulama</p>
+            </div>
+            <div className="bg-[var(--background)] px-8 py-6 rounded-xl border border-[var(--foreground)]/10 hover:border-[var(--foreground)]/30 transition-all min-w-[200px] opacity-70 cursor-not-allowed">
+              <span className="text-4xl block mb-4">🏅</span>
+              <h3 className="font-bold mb-2">Sertifikasyon</h3>
+              <p className="text-xs opacity-60">Uyum Süreçleri</p>
+            </div>
           </div>
-          <div className="p-8 border border-[var(--foreground)]/10 rounded-lg hover:border-[var(--color-neon-blue)]/50 transition-colors bg-[var(--background)]">
-            <h4 className="text-xl font-bold text-[var(--foreground)] mb-4">Kanıt Disiplini</h4>
-            <p className="opacity-60 text-sm">Yeşil aklama riskini yönetiriz. Ölçülebilir, kanıtlanabilir sınırlar içinde konuşuruz.</p>
+        </div>
+      </section>
+
+      {/* Bilgi Merkezi & Tasarım Lab */}
+      <section className="py-24 bg-[var(--background)]">
+        <div className="container mx-auto px-4 grid md:grid-cols-2 gap-12">
+          {/* Bilgi Merkezi */}
+          <div className="flex flex-col h-full justify-center">
+            <h2 className="text-3xl font-bold text-[var(--foreground)] mb-8">Bilgi Merkezi</h2>
+            <ul className="space-y-4">
+              <li>
+                <Link href="/blog" className="flex items-center p-4 rounded-lg bg-[var(--foreground)]/5 hover:bg-[var(--foreground)]/10 transition-colors">
+                  <span className="w-12 h-12 rounded-full bg-[var(--color-neon-blue)]/20 text-[var(--color-neon-blue)] flex items-center justify-center mr-4">📝</span>
+                  <div>
+                    <h4 className="font-bold">Blog</h4>
+                    <p className="text-xs opacity-60">Güncel makaleler ve içgörüler</p>
+                  </div>
+                </Link>
+              </li>
+              <li>
+                <Link href="/sss" className="flex items-center p-4 rounded-lg bg-[var(--foreground)]/5 hover:bg-[var(--foreground)]/10 transition-colors">
+                  <span className="w-12 h-12 rounded-full bg-[var(--color-neon-orange)]/20 text-[var(--color-neon-orange)] flex items-center justify-center mr-4">❓</span>
+                  <div>
+                    <h4 className="font-bold">S.S.S.</h4>
+                    <p className="text-xs opacity-60">Sıkça sorulan sorular</p>
+                  </div>
+                </Link>
+              </li>
+            </ul>
           </div>
-          <div className="p-8 border border-[var(--foreground)]/10 rounded-lg hover:border-[var(--color-neon-blue)]/50 transition-colors bg-[var(--background)]">
-            <h4 className="text-xl font-bold text-[var(--foreground)] mb-4">Teknoloji Entegrasyonu</h4>
-            <p className="opacity-60 text-sm">Operasyonel yükü azaltan, veri odaklı program tasarımı ve raporlama altyapısı.</p>
+
+          {/* Tasarım Lab */}
+          <div className="relative rounded-2xl overflow-hidden bg-black text-white p-12 flex flex-col justify-center min-h-[400px]">
+            <div className="absolute inset-0 bg-gradient-to-br from-gray-900 to-black z-0"></div>
+            <DataGrid className="opacity-20 z-0" />
+            <div className="relative z-10">
+              <span className="text-xs font-mono text-[var(--color-neon-blue)] mb-4 block">EXPERIMENTAL</span>
+              <h2 className="text-3xl font-bold mb-6">Tasarım Laboratuvarı</h2>
+              <p className="opacity-70 mb-8 max-w-sm">
+                Vera Terra&apos;nın dijital geleceğini şekillendirdiğimiz deney alanı. Yeni arayüzler, konseptler ve görsel deneyler.
+              </p>
+              <Link href="/tasarim-lab" className="inline-block px-6 py-3 border border-white/20 rounded hover:bg-white hover:text-black transition-colors font-medium">
+                Laboratuvara Gir →
+              </Link>
+              <div className="mt-8 pt-8 border-t border-white/10 text-xs opacity-40 font-mono">
+                <Link href="/tasarim-lab/v1-home" className="hover:text-white transition-colors">
+                  Arşiv: Eski Ana Sayfa (v1) Görüntüle
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
