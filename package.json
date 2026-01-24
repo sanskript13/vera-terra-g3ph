@@ -1,6 +1,7 @@
 {
-  "name": "quantum-granule",
-  "version": "0.1.0",
+  "name": "vera-terra-web",
+  "version": "1.0.0",
+  "description": "Vera Terra Regenerative Agriculture Platform",
   "private": true,
   "scripts": {
     "dev": "next dev",
