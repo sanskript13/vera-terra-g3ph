@@ -90,7 +90,7 @@ const MilestoneCard = ({
     );
 };
 
-export default function Home() {
+export default function ComingSoonPageAltRefined() {
     const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
@@ -235,6 +235,7 @@ export default function Home() {
                         <div className="absolute inset-0 bg-gradient-radial from-[#8EBF60]/5 via-transparent to-transparent opacity-50"></div>
 
                         <div className="relative z-10 w-full flex flex-col items-center justify-between h-full">
+                            {/* Title moved to top to match other cards structure roughly */}
 
                             <div className="flex flex-col items-center justify-center flex-1">
                                 <div className="inline-block relative mb-4">
