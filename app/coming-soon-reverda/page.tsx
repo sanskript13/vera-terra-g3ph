@@ -119,7 +119,7 @@ export default function ComingSoonPage() {
                         fontSize: 'clamp(0.95rem, 2vw, 1.2rem)' // Smaller on mobile
                     }}
                 >
-                    Onarıcı Tarım | Program Tasarımı & Saha Danışmanlığı
+                    Onarıcı Tarım | Program Tasarımı & Saha Danışmanlığı & Sertifikasyon Uyum & Premium Pazar Erişim
                 </p>
 
                 {/* Status Message with Live Ping - Rounded Container */}
@@ -227,7 +227,7 @@ export default function ComingSoonPage() {
                 >
                     <span className="w-2 h-2 rounded-full bg-[#8EBF60] animate-pulse"></span>
                     <span className="text-sm text-[#C4C0BB]">
-                        Web Site Lansman Hedefi: <span className="font-bold text-[#8EBF60]">Mart 2026</span>
+                        Web Site Lansman Hedefi: <span className="font-bold text-[#8EBF60]">Haziran 2026</span>
                     </span>
                 </div>
             </div>
