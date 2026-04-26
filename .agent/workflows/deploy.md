@@ -4,84 +4,112 @@ description: Standard deployment workflow for pushing changes to production
 
 # Deployment Workflow
 
-This workflow covers the standard process for deploying code changes to the live Vera Terra website.
+This workflow covers the standard process for deploying code changes to the live Reverda website.
 
-## Prerequisites
-
-- All code changes tested locally (`npm run dev`)
-- Build verification passed (`npm run build`)
-
-## Steps
-
-1. **Verify Current Branch**
+## Recommended: Use deploy.sh
 
 ```bash
-git branch
+./deploy.sh
 ```
 
-Ensure you're on `main`. If not, switch to it.
+This script automatically:
+1. Checks for uncommitted changes
+2. Shows diff since last commit
+3. Runs `npm run build`
+4. Asks for push confirmation
+
+If deploy.sh passes, your deployment is safe.
+
+## Manual Steps (if not using deploy.sh)
+
+### Prerequisites
+
+- All code changes tested locally (`npm run build`)
+- Working tree is clean (no stray uncommitted files)
+
+### Steps
+
+// turbo
+1. **Verify Current Branch**
+
+   ```bash
+   git branch
+   ```
+
+   Ensure you're on `main`.
 
 // turbo
 2. **Check Git Status**
 
-```bash
-git status
-```
+   ```bash
+   git status
+   ```
 
-Review which files have been modified.
-
-// turbo
-3. **Stage All Changes**
-
-```bash
-git add .
-```
-
-1. **Commit with Descriptive Message**
-
-```bash
-git commit -m "feat: [describe your changes]"
-```
-
-Use conventional commit format:
-
-- `feat:` - New feature
-- `fix:` - Bug fix
-- `docs:` - Documentation update
-- `style:` - Code formatting
-- `refactor:` - Code restructuring
-- `perf:` - Performance improvement
+   Review modified files. If there are unexpected changes, investigate before proceeding.
 
 // turbo
-5. **Push to Remote**
+3. **Build Verification (ZORUNLU)**
 
-```bash
-git push
-```
+   ```bash
+   npm run build
+   ```
 
-This automatically triggers Vercel deployment.
+   > ⚠️ Build başarısızsa ASLA push etme.
 
-1. **Monitor Deployment**
+4. **Stage ONLY Changed Files**
 
-- Check Vercel dashboard for build status
-- Typical build time: 1-2 minutes
-- You'll receive deployment URL once complete
+   ```bash
+   # ✅ DO — specific files only
+   git add app/page.tsx app/layout.tsx
 
-1. **Verify Live Site**
+   # ❌ DON'T — never use these
+   # git add .
+   # git add -A
+   ```
 
-- Visit the deployed URL
-- Test critical pages and functionality
-- Ensure no visual regressions
+5. **Commit with Descriptive Message**
+
+   ```bash
+   git commit -m "feat: [describe your changes]"
+   ```
+
+   Conventional commit prefixes:
+
+   - `feat:` - New feature
+   - `fix:` - Bug fix
+   - `content:` - Content/text changes
+   - `chore:` - Maintenance/cleanup
+   - `style:` - Visual/CSS changes
+
+// turbo
+6. **Push to Remote**
+
+   ```bash
+   git push
+   ```
+
+   This automatically triggers Vercel deployment.
+
+7. **Monitor Deployment**
+
+   - Check Vercel dashboard for build status
+   - Typical build time: 1-2 minutes
+   - Verify live site after deployment
 
 ## Rollback (if needed)
 
 ```bash
+# Revert last commit
 git revert HEAD
 git push
+
+# OR hard reset to specific commit
+git reset --hard <commit-hash>
+git push --force
 ```
 
 ## Notes
 
 - Vercel auto-deploys from `main` branch
-- Preview deployments created for PRs (if using branches)
-- Always test locally before deploying
+- Always build locally before pushing
+- Use `./deploy.sh` for the safest deployment path

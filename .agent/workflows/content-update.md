@@ -6,82 +6,90 @@ description: Update existing page content
 
 Use this when you have new content (text, images) to integrate into an existing page.
 
-## Prerequisites
+## Pre-Flight Checklist (ZORUNLU)
 
-- Content provided as text/markdown
-- Images (if any) in correct format
+Before making ANY changes:
+
+```bash
+# 1. Clean working tree kontrolü
+git status
+
+# 2. Doğru dosyayı bul — route yapısını kontrol et
+ls app/          # Sadece production dosyaları burada olmalı
+head -5 app/page.tsx   # Ana sayfa doğrulaması
+
+# 3. Uncommitted changes varsa ÖNCE commit et
+git add <files> && git commit -m "wip: save current state"
+```
+
+> ⚠️ ASLA uncommitted changes varken yeni düzenleme başlama.
+> ⚠️ ASLA `git add -A` kullanma — sadece değişen dosyaları ekle.
+
+## Active Pages (Nisan 2026)
+
+| Route | Dosya | Durum |
+|-------|-------|:-----:|
+| `/` | `app/page.tsx` | ✅ Coming Soon |
+| 404 | `app/not-found.tsx` | ✅ Aktif |
+
+> Diğer sayfalar (blog, çözümler, vb.) silinmiştir.
+> Full-site geliştirmesi için yeni branch açın.
 
 ## Steps
 
 1. **Locate Target Page**
-Identify which file to edit:
 
-- Homepage: `app/page.tsx`
-- Solutions hub: `app/cozumler/page.tsx`
-- Specific solution: `app/cozumler/[name]/page.tsx`
-- About: `app/hakkimizda/page.tsx`
-- Blog post: `app/blog/[slug]/page.tsx`
+   - Homepage: `app/page.tsx`
+   - Layout/meta: `app/layout.tsx`
+   - Styles: `app/globals.css`
 
-1. **Backup Current Version** (optional but recommended)
+2. **Edit Content**
+   Open the file and update:
 
-```bash
-cp app/page.tsx app/page.tsx.backup
-```
+   - Text content in JSX
+   - Metadata (title, description) in `layout.tsx`
+   - Links
+   - Section headings
 
-1. **Edit Content**
-Open the file and update:
+   **Remember**:
 
-- Text content in JSX
-- Metadata (title, description)
-- Links
-- Section headings
+   - Escape Turkish characters: `'` → `&apos;`, `"` → `&quot;`
+   - Keep existing Tailwind classes
+   - Maintain component structure
 
-**Remember**:
+3. **Add Images (if applicable)**
 
-- Escape Turkish characters: `'` → `&apos;`, `"` → `&quot;`
-- Keep existing Tailwind classes
-- Maintain component structure
+   ```bash
+   # Copy images to public directory
+   cp /path/to/image.png public/assets/
+   ```
 
-1. **Add Images (if applicable)**
+   Reference in code:
 
-```bash
-# Copy images to public directory
-cp /path/to/image.png public/assets/
-```
-
-Reference in code:
-
-```tsx
-<img src="/assets/image.png" alt="Description" />
-```
+   ```tsx
+   <img src="/assets/image.png" alt="Description" />
+   ```
 
 // turbo
-5. **Test Changes Locally**
+4. **Build Verification (ZORUNLU — push öncesi)**
 
-```bash
-npm run dev
-```
+   ```bash
+   npm run build
+   ```
 
-Verify content renders correctly.
+   Build başarısızsa ASLA push etme.
 
-// turbo
-6. **Lint Check**
+5. **Deploy**
 
-```bash
-npm run lint
-```
+   ```bash
+   # Seçenek A: deploy.sh guard kullan (önerilen)
+   ./deploy.sh
 
-Fix any errors (usually unescaped characters).
-
-// turbo
-7. **Build Verification**
-
-```bash
-npm run build
-```
-
-1. **Deploy**
-Use `/deploy` workflow to push live.
+   # Seçenek B: manuel
+   git add app/page.tsx app/layout.tsx   # sadece değişen dosyalar
+   git commit -m "content: açıklama"
+   git push
+   ```
 
 ## Common Content Updates
 
@@ -100,5 +108,6 @@ Copy existing section patterns and adapt content.
 ## Notes
 
 - Content changes don't require code review if structure is unchanged
-- Always preview locally before deploying
+- Always build locally before deploying
 - Keep line breaks and paragraph spacing consistent
+- Use `./deploy.sh` for safe deployments
