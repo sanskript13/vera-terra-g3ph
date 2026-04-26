@@ -166,7 +166,7 @@ export default function Home() {
                         className={`text-[#A89F97] font-light tracking-wide transition-all duration-1000 delay-200 ${mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
                         style={{ fontFamily: "'Inter', sans-serif", fontSize: 'clamp(0.95rem, 2vw, 1.2rem)' }}
                     >
-                        Onarıcı Tarım | Program Tasarımı & Saha Danışmanlığı
+                        Onarıcı Tarım | Program Tasarımı & Saha Danışmanlığı & Sertifikasyon Uyum & Premium Pazar Erişim
                     </p>
                 </div>
 
@@ -271,7 +271,7 @@ export default function Home() {
                 >
                     <p className="text-[#8B8680] text-sm tracking-[0.2em] uppercase mb-4 opacity-70">Web Site Lansman Hedefi</p>
                     <div className="text-3xl md:text-5xl font-light text-[#F5F5F3] tracking-tight">
-                        Mart 2026
+                        Haziran 2026
                     </div>
                 </div>
 
