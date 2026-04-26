@@ -166,7 +166,7 @@ export default function Home() {
                         className={`text-[#A89F97] font-light tracking-wide transition-all duration-1000 delay-200 ${mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
                         style={{ fontFamily: "'Inter', sans-serif", fontSize: 'clamp(0.95rem, 2vw, 1.2rem)' }}
                     >
-                        Onarıcı Tarım | Program Tasarımı & Saha Danışmanlığı & Sertifikasyon Uyum & Premium Pazar Erişim
+                        Onarıcı Tarım | Program Tasarımı & Saha Danışmanlığı & Sertifikasyon Uyum & Premium Pazar Erişimi
                     </p>
                 </div>
 

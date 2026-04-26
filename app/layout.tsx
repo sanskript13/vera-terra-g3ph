@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Navbar } from "./components/Navbar";
-import Footer from "./components/Footer";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Reverda. Onarıcı Tarım | Program Tasarımı & Saha Danışmanlığı & Sertifikasyon Uyum & Premium Pazar Erişim",
+  title: "Reverda. Onarıcı Tarım | Program Tasarımı & Saha Danışmanlığı & Sertifikasyon Uyum & Premium Pazar Erişimi",
   description: "Onarıcı tarım programları için profesyonel tasarım, saha danışmanlığı, sertifikasyon uyum ve premium pazar erişim hizmetleri. Toprak sağlığı, karbon tutulumu ve sürdürülebilir tarım çözümleri.",
   keywords: ["onarıcı tarım", "rejeneratif tarım", "toprak sağlığı", "karbon tutulumu", "sürdürülebilir tarım", "tarım danışmanlığı", "reverda"],
   authors: [{ name: "Reverda" }],
@@ -26,7 +25,7 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: "Reverda. Onarıcı Tarım | Program Tasarımı & Saha Danışmanlığı & Sertifikasyon Uyum & Premium Pazar Erişim",
+    title: "Reverda. Onarıcı Tarım | Program Tasarımı & Saha Danışmanlığı & Sertifikasyon Uyum & Premium Pazar Erişimi",
     description: "Onarıcı tarım programları için profesyonel tasarım, saha danışmanlığı, sertifikasyon uyum ve premium pazar erişim hizmetleri.",
     url: 'https://reverda.io',
     siteName: 'Reverda',
@@ -35,7 +34,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Reverda. Onarıcı Tarım | Program Tasarımı & Saha Danışmanlığı & Sertifikasyon Uyum & Premium Pazar Erişim",
+    title: "Reverda. Onarıcı Tarım | Program Tasarımı & Saha Danışmanlığı & Sertifikasyon Uyum & Premium Pazar Erişimi",
     description: "Onarıcı tarım programları için profesyonel tasarım, saha danışmanlığı, sertifikasyon uyum ve premium pazar erişim hizmetleri.",
   },
   robots: {
@@ -61,11 +60,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Navbar />
-        <main className="pt-20">
+        <main>
           {children}
         </main>
-        <Footer />
       </body>
     </html>
   );
